@@ -10,6 +10,9 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function roots_scripts() {
+  wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Droid+Sans:400,700', false);
+  wp_enqueue_style( 'googleFonts');
+
   wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {wp_enqueue_script('comment-reply'); }
@@ -22,6 +25,16 @@ function roots_scripts() {
   wp_enqueue_script('roots_scripts');
 }
 add_action('wp_enqueue_scripts', 'roots_scripts');
+
+function jd_header_image() {?>
+  <style type="text/css">
+  #logo {
+    background: url(<?php header_image(); ?>) no-repeat;
+  }
+  </style>
+<?php
+}
+add_action( 'wp_footer', 'jd_header_image' );
 
 /**
  * Google Analytics snippet from HTML5 Boilerplate

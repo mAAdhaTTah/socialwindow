@@ -1,1 +1,31 @@
-.banner { }
+.banner {
+  @include grid-row();
+  margin-bottom: rem-calc(10);
+
+  #logo {
+    @include grid-column( $columns: 3 );
+    background-color: white;
+    padding: 0;
+    height: rem-calc(180);
+    width: rem-calc(180);
+    -webkit-border-radius: 150px;
+       -moz-border-radius: 150px;
+            border-radius: 150px;
+  }
+
+  #blog-info {
+    @include grid-column( $columns: 9 );
+  }
+
+  #title {
+
+  }
+
+  #social {
+
+  }
+
+  #subtitle {
+
+  }
+}
