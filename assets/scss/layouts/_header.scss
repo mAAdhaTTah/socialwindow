@@ -1,31 +1,54 @@
 .banner {
   @include grid-row();
+  margin-top: rem-calc(10);
   margin-bottom: rem-calc(10);
 
-  #logo {
-    @include grid-column( $columns: 3 );
-    background-color: white;
-    padding: 0;
-    height: rem-calc(180);
-    width: rem-calc(180);
-    -webkit-border-radius: 150px;
-       -moz-border-radius: 150px;
-            border-radius: 150px;
+  #logo  {
+    @include grid-column(
+        $columns: 3,
+        $last-column: false,
+        $float: left,
+        $collapse: false
+    );
+
+    .container {
+      padding: 0;
+      width: 180px;
+      height: 180px;
+      -webkit-border-radius: 90px;
+         -moz-border-radius: 90px;
+              border-radius: 90px;
+    }
   }
 
   #blog-info {
-    @include grid-column( $columns: 9 );
+    @include grid-column(
+      $columns: 9,
+      $last-column: true,
+      $float: right,
+      $collapse: false
+    );
+    padding-left: 40px;
+    height: 100%;
   }
 
   #title {
-
+    border-bottom: $border-default;
   }
 
   #social {
+    border-bottom: $border-default;
+    padding: 10px 0;
 
+    .fa {
+      font-size: $h2-font-size;
+    }
   }
 
   #subtitle {
-
+    vertical-align: "bottom";
+    h2 {
+      font-size: $h4-font-size;
+    }
   }
 }
