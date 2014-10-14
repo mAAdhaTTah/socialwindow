@@ -11,10 +11,15 @@
         </div>
 
         <div id="social">
-          <i class="fa fa-github"></i>
-          <i class="fa fa-facebook"></i>
-          <i class="fa fa-twitter"></i>
-          <i class="fa fa-youtube"></i>
+          <i class="fa fa-facebook-square"></i>
+          <i class="fa fa-twitter-square"></i>
+          <i class="fa fa-linkedin-square"></i>
+          <i class="fa fa-google-plus-square"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-tumblr-square"></i>
+          <i class="fa fa-github-square"></i>
+          <i class="fa fa-reddit-square"></i>
+          <i class="fa fa-stack-exchange"></i>
         </div>
 
         <div id="subtitle">
