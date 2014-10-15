@@ -2,42 +2,59 @@
   @include grid-row();
   margin-top: rem-calc(10);
   margin-bottom: rem-calc(10);
+}
 
-  #logo  {
+#logo  {
+  @include grid-column(
+      $columns: 3,
+      $last-column: false,
+      $float: left,
+      $collapse: false
+  );
+
+  @media #{$small-only} {
     @include grid-column(
-        $columns: 3,
-        $last-column: false,
-        $float: left,
-        $collapse: false
+        $columns: 0
     );
-
-    .container {
-      padding: 0;
-      width: 180px;
-      height: 180px;
-      -webkit-border-radius: 90px;
-         -moz-border-radius: 90px;
-              border-radius: 90px;
-    }
+    display: none;
   }
 
-  #blog-info {
+  .container {
+    padding: 0;
+    width: 180px;
+    height: 180px;
+    -webkit-border-radius: 90px;
+       -moz-border-radius: 90px;
+            border-radius: 90px;
+  }
+}
+
+#blog-info {
+  @include grid-column(
+    $columns: 9,
+    $last-column: true,
+    $float: right,
+    $collapse: false
+  );
+  padding-left: 40px;
+  height: 100%;
+
+  @media #{$small-only} {
     @include grid-column(
-      $columns: 9,
+      $columns: 12,
       $last-column: true,
       $float: right,
       $collapse: false
     );
-    padding-left: 40px;
-    height: 100%;
+    padding: 0;
+    text-align: center;
   }
 
   #title {
-    border-bottom: $border-default;
+
   }
 
   #social {
-    border-bottom: $border-default;
     padding: 10px 0;
 
     .fa {
@@ -47,6 +64,7 @@
 
   #subtitle {
     vertical-align: "bottom";
+
     h2 {
       font-size: $h4-font-size;
     }
