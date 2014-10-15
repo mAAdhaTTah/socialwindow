@@ -29,9 +29,14 @@
     </section>
 
     <nav role="navigation" class="top-bar" id="main-navigation" data-topbar>
+      <ul class="title-area">
+        <li class="name"></li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+      </ul>
+
       <section class="top-bar-section">
         <?php if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'left'));
+          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'right'));
         endif; ?>
       </section>
     </nav>
