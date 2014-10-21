@@ -1,7 +1,9 @@
 .banner {
   @include grid-row();
-  margin-top: rem-calc(10);
-  margin-bottom: rem-calc(10);
+  margin: 0 auto;
+  padding-top: rem-calc(10);
+  padding-bottom: rem-calc(10);
+  background-color: $primary-color;
 }
 
 #logo  {
@@ -63,7 +65,7 @@
       font-size: $h2-font-size;
 
       &:hover {
-        color: #000;
+        color: $font-color-dark;
       }
     }
   }

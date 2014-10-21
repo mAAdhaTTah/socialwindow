@@ -33,30 +33,27 @@ $total-columns: 12;
 
 // Global
 
-// Border style
-$border-default: 1px solid #000;
-
 // We use these to define default font weights
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
 
+// We use these as default colors throughout
+$primary-color: #FFF3C9;
+$secondary-color: #DBD1AD;
+$accent-dark: #24331E;
+$accent-light: #6C9E49;
+$font-color-dark: #000;
+$font-color-light: #FFF;
+
 // We use these to control various global styles
-$body-bg: #fff;
-$body-font-color: #222;
+$body-bg: $primary-color;
+$body-font-color: $font-color-dark;
 $body-font-family: 'Vollkorn', cursive;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 
 // We use this to control font-smoothing
 $font-smoothing: antialiased;
-
-// We use these as default colors throughout
-$primary-color: #FFF;
-$secondary-color: #e7e7e7;
-$alert-color: #f04124;
-$success-color: #43AC6A;
-$warning-color: #f08a24;
-$info-color: #a0d3e8;
 
 // We use these to make sure border radius matches unless we want it different.
 $global-radius: 3px;
@@ -88,12 +85,6 @@ $medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max
 $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
 $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
 
-// $xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
-// $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
-
-// $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
-// $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
-
 // Legacy
 $small: $medium-up;
 $medium: $medium-up;
@@ -106,6 +97,9 @@ $cursor-pointer-value: pointer;
 $cursor-help-value: help;
 $cursor-text-value: text;
 
+// Border style
+$border-default: 1px solid #000;
+
 //
 // TYPOGRAPHY
 //
@@ -116,7 +110,7 @@ $cursor-text-value: text;
 $header-font-family: 'Unica One', sans-serif;
 $header-font-weight: $font-weight-bold;
 $header-font-style: normal;
-$header-font-color: #222;
+$header-font-color: $font-color-dark;
 $header-line-height: 1.4;
 $header-top-margin: .2rem;
 $header-bottom-margin: .5rem;
@@ -1175,7 +1169,7 @@ $hr-margin: rem-calc(5);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: #FFF;
+$topbar-bg-color: $secondary-color;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1187,27 +1181,27 @@ $topbar-bg: $topbar-bg-color;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: #FFF;
-$topbar-dropdown-link-color: #000;
-$topbar-dropdown-link-bg: #EEE;
-// $topbar-dropdown-link-weight: $font-weight-normal;
-// $topbar-dropdown-toggle-size: 5px;
-$topbar-dropdown-toggle-color: #000;
+$topbar-dropdown-bg: $accent-light;
+$topbar-dropdown-link-color: $font-color-light;
+$topbar-dropdown-link-bg: $accent-dark;
+$topbar-dropdown-link-weight: $font-weight-normal;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: $font-color-dark;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: #000;
-$topbar-link-color-hover: #000;
-$topbar-link-color-active: #000;
-$topbar-link-color-active-hover: #000;
-// $topbar-link-weight: $font-weight-normal;
+$topbar-link-color: $font-color-dark;
+$topbar-link-color-hover: $font-color-dark;
+$topbar-link-color-active: $font-color-light;
+$topbar-link-color-active-hover: $font-color-light;
+$topbar-link-weight: $font-weight-normal;
 $topbar-link-font-size: rem-calc(17);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg: $topbar-bg;
-$topbar-link-bg-color-hover: #CCC;
-$topbar-link-bg-hover: #CCC;
-$topbar-link-bg-active: #AAA;
-$topbar-link-bg-active-hover: #CCC;
+$topbar-link-bg-color-hover: $accent-light;
+$topbar-link-bg-hover: $accent-light;
+$topbar-link-bg-active: $accent-dark;
+$topbar-link-bg-active-hover: $accent-light;
 // $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
 // $topbar-link-padding: $topbar-height / 3;
@@ -1215,20 +1209,20 @@ $topbar-link-bg-active-hover: #CCC;
 // $topbar-button-font-size: 0.75rem;
 // $topbar-button-top: 7px;
 
-$topbar-dropdown-label-color: #FFF;
+$topbar-dropdown-label-color: $font-color-light;
 $topbar-dropdown-label-text-transform: uppercase;
 $topbar-dropdown-label-font-weight: $font-weight-bold;
 $topbar-dropdown-label-font-size: rem-calc(10);
-$topbar-dropdown-label-bg: #EEE;
+$topbar-dropdown-label-bg: $primary-color;
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: $font-weight-bold;
-$topbar-menu-link-color: #000;
-$topbar-menu-icon-color: #000;
-// $topbar-menu-link-color-toggled: #888;
-// $topbar-menu-icon-color-toggled: #888;
+$topbar-menu-link-color: $font-color-dark;
+$topbar-menu-icon-color: $font-color-dark;
+$topbar-menu-link-color-toggled: $font-color-dark;
+$topbar-menu-icon-color-toggled: $font-color-dark;
 
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
