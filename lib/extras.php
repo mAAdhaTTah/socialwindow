@@ -108,7 +108,7 @@ function posts_link_attributes() {
 
 //
 //    Adds the livereload script. Primarily for testing other devices on same network as web server
-//    Change the IP address to the IP of the computer thats running the "gulp" command (likely your dev computer)  
+//    Change the IP address to the IP of the computer thats running the "gulp" command (likely your dev computer)
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -119,34 +119,10 @@ function livereload() {
 }
 
 // Runs the livereload function if domain contains .dev — edit to fit your own needs
-$host = $_SERVER['HTTP_HOST']; 
+$host = $_SERVER['HTTP_HOST'];
 if (strpos($host,'.dev') !== false) {
     add_action('wp_enqueue_scripts', 'livereload');
 }
-
-
-
-
-
-
-
-
-//
-//		Removes default dashboard widgets
-//
-//////////////////////////////////////////////////////////////////////
-
-
-
-function remove_dashboard_widgets() {
-    global $wp_meta_boxes;
-	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
-	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
-	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
-	update_user_meta( get_current_user_id(), 'show_welcome_panel', false );
-	remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
-}
-add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 
 
 
