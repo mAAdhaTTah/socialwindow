@@ -13,8 +13,8 @@
       get_template_part('templates/header');
     ?>
 
-    <div class="content row" role="document">
-      <main class="main small-12 columns" role="main">
+    <div class="wrap" role="document">
+      <main class="main" role="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->
     </div><!-- /.content -->

@@ -1,5 +1,18 @@
 // Content wrapper
-.wrap { }
+.wrap {
+  @include grid-row();
+}
 
 // Main content area
-.main { }
+.main {
+  @include grid-column(
+    // Control the number of columns
+    $columns:12,
+    // Specify whether or not this is the last column in the row
+    $last-column:true,
+    // Set to true to remove column padding
+    $collapse: true,
+    // Specify the float direction
+    $float: left
+  );
+}

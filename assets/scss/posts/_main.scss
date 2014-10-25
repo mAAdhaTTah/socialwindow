@@ -1,0 +1,12 @@
+.hentry {
+  padding: 10px ;
+  article {
+    @include grid-row();
+  }
+
+  header { }
+  time { }
+  .byline { }
+  .entry-content { }
+  footer { }
+}
