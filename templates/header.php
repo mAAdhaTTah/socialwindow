@@ -27,7 +27,7 @@
     </div>
   </section>
 
-  <section class="contain-to-grid">
+  <section class="contain-to-grid nav-container">
     <nav role="navigation" class="top-bar" id="main-navigation" data-topbar>
       <ul class="title-area">
         <li class="name"></li>

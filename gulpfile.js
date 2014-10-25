@@ -25,7 +25,7 @@ var jshint = require("gulp-jshint");					// jshint
 		gulp.src([
 			'bower_components/foundation/scss/normalize.scss',         // Gets normalize
 			'assets/scss/app.scss'])                                   // Gets the apps scss
-			.pipe(sass({style: 'compressed', errLogToConsole: true}))  // Compile sass
+			.pipe(sass({includePaths: require('node-bourbon').includePaths, style: 'compressed', errLogToConsole: true}))  // Compile sass
 			.pipe(concat('main.css'))                                  // Concat all css
 			.pipe(rename({suffix: '.min'}))                            // Rename it
 			.pipe(minifycss())                                         // Minify the CSS

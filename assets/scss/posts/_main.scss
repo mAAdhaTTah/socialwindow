@@ -1,8 +1,6 @@
 .hentry {
-  padding: 10px ;
-  article {
-    @include grid-row();
-  }
+  margin-bottom: 50px;
+  padding: 0 10px 10px;
 
   header { }
   time { }
