@@ -1,0 +1,24 @@
+.format-image {
+  margin: -30px -20px 50px;
+  padding: 30px 30px 0;
+  background-color: darken( $secondary-color, 7% );
+
+  .entry-content {
+    margin: -30px auto;
+    padding: 30px;
+
+    p {
+      margin-bottom: 30px;
+      color: $font-color-light;
+    }
+  }
+
+  footer {
+    margin: -30px auto 0;
+    padding: 30px 30px 20px;
+  }
+
+  .entry-title {
+    font-size: $h6-font-size;
+  }
+}
