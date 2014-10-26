@@ -1,4 +1,7 @@
 .format-gallery {
+  margin: -30px -30px 50px;;
+  padding: 30px;
+  background-color: darken( $secondary-color, 7% );
 
   .entry-content {
 
@@ -6,11 +9,12 @@
       @include thumb;
     }
 
-    #gallery-last {
-      height: 100%;
+    .gallery-last {
+      margin: 0 auto;
 
       p {
-        padding: 10px;
+        padding: 20px;
+        height: 100%;
       }
     }
 

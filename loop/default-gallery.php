@@ -4,7 +4,7 @@
 </header>
 
 <div class="entry-content">
-  <ul class="small-block-grid-4" data-equalizer>
+  <ul class="small-block-grid-4">
     <?php
       $attachments = get_posts(array(
         'post_type' => 'attachment',
@@ -22,15 +22,15 @@
 
         <li>
           <a class="gallery-thumb" href="<?php the_permalink(); ?>">
-            <img data-equalizer-watch src="<?php echo $thumbnail[0]; ?>">
+            <img src="<?php echo $thumbnail[0]; ?>">
           </a>
         </li>
 
       <?php endforeach; ?>
     <?php endif; ?>
-    <li>
+    <li class="gallery-last">
       <a class="gallery-thumb" href="<?php the_permalink(); ?>">
-        <p data-equalizer-watch><?php _e( 'Click for the full gallery.', 'roots' ); ?></p>
+        <p><?php _e( 'Click for the full gallery.', 'roots' ); ?></p>
       </a>
     </li>
   </ul>
