@@ -28,7 +28,7 @@ function roots_scripts() {
 }
 add_action('wp_enqueue_scripts', 'roots_scripts');
 
-function jd_header_image() {?>
+function sw_header_image() {?>
   <style type="text/css">
   #logo .container {
     background: url(<?php header_image(); ?>) no-repeat;
@@ -36,7 +36,7 @@ function jd_header_image() {?>
   </style>
 <?php
 }
-add_action( 'wp_footer', 'jd_header_image' );
+add_action( 'wp_footer', 'sw_header_image' );
 
 /**
  * Google Analytics snippet from HTML5 Boilerplate
