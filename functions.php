@@ -22,7 +22,7 @@ $roots_includes = array(
   'lib/comments.php',                                 // Custom comments modifications
   'lib/scripts.php',                                  // Scripts and stylesheets
   'lib/extras.php',                                   // Custom functions
-  'lib/wp-post-formats/cf-post-formats.php',          // Post Formats UI
+  'lib/cf-post-formats/cf-post-formats.php',          // Post Formats UI
 );
 
 foreach ($roots_includes as $file) {

@@ -56,14 +56,6 @@ function cfpf_admin_init() {
 		if (in_array('audio', $post_formats[0])) {
 			add_action('save_post', 'cfpf_format_audio_save_post');
 		}
-		if (in_array('gallery', $post_formats[0])) {
-			add_action('save_post', 'cfpf_format_gallery_save_post');
-		}
-	}
-	// add sortable JS for gallery
-	global $pagenow;
-	if (in_array($pagenow, array('post.php', 'post-new.php'))) {
-		wp_enqueue_script('jquery-ui-sortable');
 	}
 }
 add_action('admin_init', 'cfpf_admin_init');
@@ -199,36 +191,12 @@ function cfpf_format_audio_save_post($post_id) {
 }
 // action added in cfpf_admin_init()
 
-/**
- * Updates the _format_gallery values in the DB for
- * the radio buttons and text field in the gallery format tab.
- *
- *
- * @param int $post_id The id of the post.
- * @return void
- */
-function cfpf_format_gallery_save_post( $post_id ) {
-	if (!defined('XMLRPC_REQUEST')) {
-		$keys = array(
-			'_format_gallery_shortcode',
-			'_format_gallery_type'
-		);
-		foreach ($keys as $key) {
-			if (isset($_POST[$key])) {
-				update_post_meta($post_id, $key, $_POST[$key]);
-			}
-		}
-	}
-}
-// action added in cfpf_admin_init()
-
 function cfpf_gallery_preview() {
 	if (empty($_POST['id']) || !($post_id = intval($_POST['id']))) {
 		exit;
 	}
-
 	global $post;
-	$post = get_post($post_id);
+	$post->ID = $post_id;
 	ob_start();
 	include('views/format-gallery.php');
 	$html = ob_get_clean();
@@ -238,139 +206,20 @@ function cfpf_gallery_preview() {
 }
 add_action('wp_ajax_cfpf_gallery_preview', 'cfpf_gallery_preview');
 
-function cfpf_gallery_menu_order() {
-	if (!empty($_POST['order']) && is_array($_POST['order'])) {
-		$i = 0;
-		foreach ($_POST['order'] as $post_id) {
-			$post_id = intval($post_id);
-			if ($post_id) {
-				wp_update_post(array(
-					'ID' => $post_id,
-					'menu_order' => $i
-				));
-				++$i;
-			}
-		}
-		header('Content-type: text/javascript');
-		echo json_encode(array(
-			'result' => 'success'
-		));
-		die();
-	}
-}
-add_action('wp_ajax_cfpf_gallery_menu_order', 'cfpf_gallery_menu_order');
-
-function cfpf_gallery_image_id($attr, $attachment) {
-	$attr['data-id'] = $attachment->ID;
-	return $attr;
-}
-add_filter('wp_get_attachment_image_attributes', 'cfpf_gallery_image_id', 10, 2);
-
-// filter added conditionally in views/format-gallery.php
-function cfpf_ssl_gallery_preview($attr, $attachment) {
-	$attr['src'] = str_replace('http://', 'https://', $attr['src']);
-	$attr['data-id'] = $attachment->ID;
-	return $attr;
-}
-
 function cfpf_post_has_gallery($post_id = null) {
 	if (empty($post_id)) {
-		$post = get_post();
-		$post_id = $post->ID;
+		$post_id = get_the_ID();
 	}
-	if (cfpf_post_gallery_type() == 'shortcode') {
-		$shortcode = get_post_meta($post_id, '_format_gallery_shortcode', true);
-		return (bool) !empty($shortcode);
-	}
-	else {
-		$images = new WP_Query(array(
-			'post_parent' => $post_id,
-			'post_type' => 'attachment',
-			'post_status' => 'inherit',
-			'posts_per_page' => 1, // -1 to show all
-			'post_mime_type' => 'image%',
-			'orderby' => 'menu_order',
-			'order' => 'ASC'
-		));
-		return (bool) $images->post_count;
-	}
-}
-
-// returns the ids parameter from a gallery shortcode,
-// if no param, it finds all attachments (like WP core)
-// returns a comma separated list
-function cfpf_post_gallery_shortcode_ids($post_id = null) {
-	if (empty($post_id)) {
-		$post = get_post();
-		$post_id = $post->ID;
-	}
-	$shortcode = get_post_meta($post_id, '_format_gallery_shortcode', true);
-
-	// parse shortcode to get 'ids' param
-	$pattern = get_shortcode_regex();
-	preg_match("/$pattern/s", $shortcode, $match);
-	$atts = shortcode_parse_atts($match[3]);
-
-	if (isset($atts['ids'])) {
-		return $atts['ids'];
-	}
-	else {
-		$images = new WP_Query(array(
-			'post_parent' => $post_id,
-			'post_type' => 'attachment',
-			'post_status' => 'inherit',
-			'posts_per_page' => -1, // -1 to show all
-			'post_mime_type' => 'image%',
-			'orderby' => 'menu_order',
-			'order' => 'ASC'
-		));
-		$ids = array();
-		foreach ($images as $image) {
-			$ids[] = $image->ID;
-		}
-		return implode($ids, ',');
-	}
-}
-
-// ensure that we have expected data and set a default
-// for backward compatibility.
-function cfpf_post_gallery_type() {
-	$post = get_post();
-	$value = get_post_meta($post->ID, '_format_gallery_type', true);
-	switch ($value) {
-		case 'shortcode':
-		case 'attached-images':
-			$value = $value;
-		break;
-		default:
-			$value = 'attached-images';
-	}
-	return $value;
-}
-
-// accepts an associative array of args to added to the shortcode before output
-function cfpf_gallery_output($args = array()) {
-	// setup args if we have any
-	$args_string = '';
-	if (!empty($args)) {
-		foreach ($args as $k => $v) {
-			$args_string .= $k.'="'.esc_attr($v).'" ';
-		}
-	}
-	$type = cfpf_post_gallery_type();
-	// if type is set to shortcode, make sure we have something as a shortcode
-	if ($type == 'shortcode') {
-		$post = get_post();
-		$shortcode = trim(get_post_meta($post->ID, '_format_gallery_shortcode', true));
-		if (!empty($shortcode) && substr($shortcode, -1) == ']') {
-			// add args
-			$shortcode = substr($shortcode, 0, -1).' '.$args_string.']';
-			echo do_shortcode($shortcode);
-			return;
-		}
-	}
-	// or fall back to attached images
-	echo do_shortcode('[gallery '.$args_string.']');
+	$images = new WP_Query(array(
+		'post_parent' => $post_id,
+		'post_type' => 'attachment',
+		'post_status' => 'inherit',
+		'posts_per_page' => 1, // -1 to show all
+		'post_mime_type' => 'image%',
+		'orderby' => 'menu_order',
+		'order' => 'ASC'
+	));
+	return (bool) $images->post_count;
 }
 
 function cfpf_pre_ping_post_links($post_links, $pung, $post_id = null) {
@@ -401,6 +250,5 @@ function cfpf_social_broadcast_format($format, $post) {
 	return $format;
 }
 add_filter('social_broadcast_format', 'cfpf_social_broadcast_format', 10, 2);
-
 
 } // end defined check

@@ -21,6 +21,14 @@ add_theme_support( 'custom-header', $defaults );
 define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
 
 /**
+ * Configure the directory for Post Formats UI
+ */
+function sw_cfpf_base_url($url) {
+  return get_template_directory_uri() . '/lib/cf-post-formats/';
+}
+add_filter('cfpf_base_url', 'sw_cfpf_base_url');
+
+/**
  * $content_width is a global variable used by WordPress for max image upload sizes
  * and media embeds (in pixels).
  *

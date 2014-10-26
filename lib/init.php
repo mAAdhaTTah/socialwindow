@@ -17,15 +17,37 @@ function roots_setup() {
   // http://codex.wordpress.org/Post_Thumbnails
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
-  add_theme_support('post-thumbnails');
+  add_theme_support( 'post-thumbnails' );
+  set_post_thumbnail_size( '232', '232' );
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
-  add_theme_support('post-formats', array( 'link', 'status', 'quote', 'video', 'audio', 'gallery' ) );
+  add_theme_support(
+    'post-formats',
+    array(
+      'status',
+      'link',
+      'image',
+      'gallery',
+      'video',
+      'quote',
+    )
+  );
+  add_theme_support(
+    'structured-post-formats',
+    array(
+      'status',
+      'link',
+      'image',
+      'gallery',
+      'video',
+      'quote',
+    )
+  );
 
   // Add HTML5 markup for captions
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
-  add_theme_support('html5', array('caption'));
+  add_theme_support( 'html5', array( 'caption' ) );
 
   // Tell the TinyMCE editor to use a custom stylesheet
   add_editor_style('/assets/css/editor-style.css');
