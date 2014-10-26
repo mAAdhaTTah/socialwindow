@@ -992,12 +992,8 @@ $topbar-bg-color: $secondary-color;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
-// $topbar-margin-bottom: 0;
-
-// Controlling the styles for the title in the top bar
-// $topbar-title-weight: $font-weight-normal;
-// $topbar-title-font-size: rem-calc(17);
+$topbar-height: 45px;
+$topbar-margin-bottom: 50px;
 
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: $accent-light;
@@ -1006,7 +1002,7 @@ $topbar-dropdown-link-bg: $accent-dark;
 $topbar-dropdown-link-weight: $font-weight-normal;
 $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: $font-color-dark;
-// $topbar-dropdown-toggle-alpha: 0.4;
+$topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: $font-color-dark;
@@ -1015,18 +1011,18 @@ $topbar-link-color-active: $font-color-light;
 $topbar-link-color-active-hover: $font-color-light;
 $topbar-link-weight: $font-weight-normal;
 $topbar-link-font-size: rem-calc(17);
-// $topbar-link-hover-lightness: -10%; // Darken by 10%
+$topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg: $topbar-bg;
 $topbar-link-bg-color-hover: $accent-light;
 $topbar-link-bg-hover: $accent-light;
 $topbar-link-bg-active: $accent-dark;
 $topbar-link-bg-active-hover: $accent-light;
-// $topbar-link-font-family: $body-font-family;
-// $topbar-link-text-transform: none;
-// $topbar-link-padding: $topbar-height / 3;
+$topbar-link-font-family: $body-font-family;
+$topbar-link-text-transform: none;
+$topbar-link-padding: $topbar-height / 3;
 
-// $topbar-button-font-size: 0.75rem;
-// $topbar-button-top: 7px;
+$topbar-button-font-size: 0.75rem;
+$topbar-button-top: 7px;
 
 $topbar-dropdown-label-color: $font-color-light;
 $topbar-dropdown-label-text-transform: uppercase;
@@ -1035,9 +1031,9 @@ $topbar-dropdown-label-font-size: rem-calc(10);
 $topbar-dropdown-label-bg: $primary-color;
 
 // Top menu icon styles
-// $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: rem-calc(13);
-// $topbar-menu-link-weight: $font-weight-bold;
+$topbar-menu-link-transform: uppercase;
+$topbar-menu-link-font-size: rem-calc(13);
+$topbar-menu-link-weight: $font-weight-bold;
 $topbar-menu-link-color: $font-color-dark;
 $topbar-menu-icon-color: $font-color-dark;
 $topbar-menu-link-color-toggled: $font-color-dark;
