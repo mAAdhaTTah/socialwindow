@@ -3,7 +3,7 @@
   <?php // get_template_part('templates/entry-meta'); ?>
 </header>
 <div class="entry-content">
-  <ul class="clearing-thumbs small-block-grid-4" data-clearing>
+  <ul <ul class="small-block-grid-2 medium-block-grid-4" data-clearing>
     <?php
       $attachments = get_posts(array(
         'post_type' => 'attachment',
@@ -18,14 +18,15 @@
       <?php foreach ( $attachments as $attachment ) : ?>
 
         <?php
-          $thumbnail = wp_get_attachment_image_src( $attachment->ID, 'thumbnail' );
+          $thumb_small = wp_get_attachment_image_src( $attachment->ID, 'gallery-thumb-small' );
+          $thumb_medup = wp_get_attachment_image_src( $attachment->ID, 'gallery-thumb-medup' );
           $full = wp_get_attachment_image_src( $attachment->ID, 'full' );
           $metadata = wp_get_attachment_metadata( $attachment->ID );
         ?>
 
         <li>
-          <a class="th" href="<?php echo $full[0]; ?>">
-            <img data-caption="<?php echo $metadata['image_meta']['caption'] ?>" src="<?php echo $thumbnail[0]; ?>">
+          <a class="gallery-thumb" href="<?php echo $full[0]; ?>">
+            <img data-caption="<?php echo $metadata['image_meta']['caption'] ?>" data-interchange="[<?php echo $thumb_small[0]; ?>, (default)], [<?php echo $thumb_medup[0]; ?>, (medium)]">
           </a>
         </li>
 

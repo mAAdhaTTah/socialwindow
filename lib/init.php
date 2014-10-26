@@ -18,7 +18,8 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size( '232', '232' );
+  add_image_size( 'gallery-thumb-medup', '160', '160', true );
+  add_image_size( 'gallery-thumb-small', '320', '320', true );
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
@@ -33,6 +34,7 @@ function roots_setup() {
       'quote',
     )
   );
+  // Adds support for formats UI
   add_theme_support(
     'structured-post-formats',
     array(

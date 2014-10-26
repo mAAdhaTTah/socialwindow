@@ -10,11 +10,16 @@
     }
 
     .gallery-last {
-      margin: 0 auto;
+      li {
 
-      p {
-        padding: 20px;
         height: 100%;
+      }
+
+      a {
+        padding: 20px;
+        background-color: $accent-dark;
+        height: 100%;
+        color: $font-color-light;
       }
     }
 

@@ -943,15 +943,15 @@ $pagination-link-current-active-bg: $accent-light;
 // $include-html-media-classes: $include-html-classes;
 
 // We use these to control border styles
-// $thumb-border-style: solid;
-// $thumb-border-width: 4px;
-// $thumb-border-color: #fff;
-// $thumb-box-shadow: 0 0 0 1px rgba(#000,.2);
-// $thumb-box-shadow-hover: 0 0 6px 1px rgba($primary-color,0.5);
+$thumb-border-style: solid;
+$thumb-border-width: 4px;
+$thumb-border-color: $accent-light;
+$thumb-box-shadow: 0 0 0 1px rgba(#000,.2);
+$thumb-box-shadow-hover: 0 0 6px 1px rgba($accent-dark,0.5);
 
 // Radius and transition speed for thumbs
-// $thumb-radius: $global-radius;
-// $thumb-transition-speed: 200ms;
+$thumb-radius: $global-radius;
+$thumb-transition-speed: 200ms;
 
 //
 // TOOLTIPS

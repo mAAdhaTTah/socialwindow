@@ -4,7 +4,7 @@
 </header>
 
 <div class="entry-content">
-  <ul class="small-block-grid-4">
+  <ul class="small-block-grid-2 medium-block-grid-4">
     <?php
       $attachments = get_posts(array(
         'post_type' => 'attachment',
@@ -18,11 +18,12 @@
     <?php if ($attachments): ?>
       <?php foreach ( $attachments as $attachment ) : ?>
 
-        <?php $thumbnail = wp_get_attachment_image_src( $attachment->ID, 'thumbnail' ); ?>
+        <?php $thumb_small = wp_get_attachment_image_src( $attachment->ID, 'gallery-thumb-small' ); ?>
+        <?php $thumb_medup = wp_get_attachment_image_src( $attachment->ID, 'gallery-thumb-medup' ); ?>
 
         <li>
           <a class="gallery-thumb" href="<?php the_permalink(); ?>">
-            <img src="<?php echo $thumbnail[0]; ?>">
+            <img data-interchange="[<?php echo $thumb_small[0]; ?>, (default)], [<?php echo $thumb_medup[0]; ?>, (medium)]">
           </a>
         </li>
 

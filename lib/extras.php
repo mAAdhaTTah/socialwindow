@@ -118,10 +118,12 @@ function livereload() {
   wp_enqueue_script('livereload');
 }
 
-// Runs the livereload function if domain contains .dev — edit to fit your own needs
-$host = $_SERVER['HTTP_HOST'];
-if (strpos($host,'.dev') !== false) {
-    add_action('wp_enqueue_scripts', 'livereload');
+// Runs the livereload function if domain contains .dev — edit to fit your own need
+if( isset( $_SERVER['HTTP_HOST'] ) ) {
+  $host = $_SERVER['HTTP_HOST'];
+  if (strpos($host,'.dev') !== false) {
+      add_action('wp_enqueue_scripts', 'livereload');
+  }
 }
 
 
