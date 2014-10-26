@@ -1,0 +1,18 @@
+.format-gallery {
+
+  .entry-content {
+
+    .gallery-thumb {
+      @include thumb;
+    }
+
+    #gallery-last {
+      height: 100%;
+
+      p {
+        padding: 10px;
+      }
+    }
+
+  }
+}
