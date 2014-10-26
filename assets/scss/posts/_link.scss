@@ -1,25 +1,37 @@
 .format-link {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   .entry-content {
     margin: -30px;
     padding: 30px;
-    background-color: $accent-dark;
+    background-color: $accent-light;
 
     p {
       margin-bottom: 30px;
-      color: $font-color-light;
+      color: $font-color-dark;
     }
   }
 
   footer {
     margin: -30px -30px 0;
     padding: 30px 30px 20px;
-    background-color: $accent-light;
+    background-color: $accent-dark;
+
+    h4 {
+
+    }
   }
 
   .entry-title {
     font-size: $h6-font-size;
+
+    a {
+      color: $font-color-light;
+
+      &:hover {
+        color: $font-color-dark;
+      }
+    }
   }
 
   time { }
