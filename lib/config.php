@@ -18,7 +18,7 @@ add_theme_support( 'custom-header', $defaults );
 /**
  * Configuration values
  */
-define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
+define('GOOGLE_ANALYTICS_ID', 'UA-56114908-1'); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
 
 /**
  * Configure the directory for Post Formats UI
