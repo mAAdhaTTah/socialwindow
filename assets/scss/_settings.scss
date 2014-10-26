@@ -104,8 +104,6 @@ $border-default: 1px solid #000;
 // TYPOGRAPHY
 //
 
-// $include-html-type-classes: $include-html-classes;
-
 // We use these to control header font styles
 $header-font-family: 'Unica One', sans-serif;
 $header-font-weight: $font-weight-bold;
@@ -125,12 +123,12 @@ $h5-font-size: rem-calc($rem-base * 1.7);
 $h6-font-size: rem-calc($rem-base * 1.55);
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10) !default;
-// $h2-font-reduction: rem-calc(10) !default;
-// $h3-font-reduction: rem-calc(5) !default;
-// $h4-font-reduction: rem-calc(5) !default;
-// $h5-font-reduction: 0 !default;
-// $h6-font-reduction: 0 !default;
+$h1-font-reduction: rem-calc(10) !default;
+$h2-font-reduction: rem-calc(10) !default;
+$h3-font-reduction: rem-calc(5) !default;
+$h4-font-reduction: rem-calc(5) !default;
+$h5-font-reduction: 0 !default;
+$h6-font-reduction: 0 !default;
 
 // These control how subheaders are styled.
 $subheader-line-height: 1.4;
@@ -140,8 +138,8 @@ $subheader-top-margin: .2rem;
 $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-// $small-font-size: 60%;
-// $small-font-color: scale-color($header-font-color, $lightness: 35%);
+$small-font-size: 60%;
+$small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
 $paragraph-font-family: inherit;
@@ -172,67 +170,52 @@ $hr-border-color: #000;
 $hr-margin: rem-calc(5);
 
 // We use these to style lists
-// $list-font-family: $paragraph-font-family;
-// $list-font-size: $paragraph-font-size;
-// $list-line-height: $paragraph-line-height;
-// $list-margin-bottom: $paragraph-margin-bottom;
-// $list-style-position: outside;
-// $list-side-margin: 1.1rem;
-// $list-ordered-side-margin: 1.4rem;
-// $list-side-margin-no-bullet: 0;
-// $list-nested-margin: rem-calc(20);
-// $definition-list-header-weight: $font-weight-bold;
-// $definition-list-header-margin-bottom: .3rem;
-// $definition-list-margin-bottom: rem-calc(12);
+$list-font-family: $paragraph-font-family;
+$list-font-size: $paragraph-font-size;
+$list-line-height: $paragraph-line-height;
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-style-position: outside;
+$list-side-margin: 1.1rem;
+$list-ordered-side-margin: 1.4rem;
+$list-side-margin-no-bullet: 0;
+$list-nested-margin: rem-calc(20);
+$definition-list-header-weight: $font-weight-bold;
+$definition-list-header-margin-bottom: .3rem;
+$definition-list-margin-bottom: rem-calc(12);
 
 // We use these to style blockquotes
-// $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
-// $blockquote-padding: rem-calc(9 20 0 19);
-// $blockquote-border: 1px solid #ddd;
-// $blockquote-cite-font-size: rem-calc(13);
-// $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
-// $blockquote-cite-link-color: $blockquote-cite-font-color;
+$blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
+$blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-border: 1px solid #ddd;
+$blockquote-cite-font-size: rem-calc(13);
+$blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
+$blockquote-cite-link-color: $blockquote-cite-font-color;
 
 // Acronym styles
-// $acronym-underline: 1px dotted #ddd;
+$acronym-underline: 1px dotted #ddd;
 
 // We use these to control padding and margin
-// $microformat-padding: rem-calc(10 12);
-// $microformat-margin: rem-calc(0 0 20 0);
+$microformat-padding: rem-calc(10 12);
+$microformat-margin: rem-calc(0 0 20 0);
 
 // We use these to control the border styles
-// $microformat-border-width: 1px;
-// $microformat-border-style: solid;
-// $microformat-border-color: #ddd;
+$microformat-border-width: 1px;
+$microformat-border-style: solid;
+$microformat-border-color: #ddd;
 
 // We use these to control full name font styles
-// $microformat-fullname-font-weight: $font-weight-bold;
-// $microformat-fullname-font-size: rem-calc(15);
+$microformat-fullname-font-weight: $font-weight-bold;
+$microformat-fullname-font-size: rem-calc(15);
 
 // We use this to control the summary font styles
-// $microformat-summary-font-weight: $font-weight-bold;
+$microformat-summary-font-weight: $font-weight-bold;
 
 // We use this to control abbr padding
-// $microformat-abbr-padding: rem-calc(0 1);
+$microformat-abbr-padding: rem-calc(0 1);
 
 // We use this to control abbr font styles
-// $microformat-abbr-font-weight: $font-weight-bold;
-// $microformat-abbr-font-decoration: none;
-
-// Accordion
-
-// $include-html-accordion-classes: $include-html-classes;
-
-// $accordion-navigation-padding: rem-calc(16);
-// $accordion-navigation-bg-color: #efefef  ;
-// $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
-// $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
-// $accordion-navigation-font-color: #222;
-// $accordion-navigation-font-size: rem-calc(16);
-// $accordion-navigation-font-family: $body-font-family;
-
-// $accordion-content-padding: $column-gutter/2;
-// $accordion-content-active-bg-color: #fff;
+$microformat-abbr-font-weight: $font-weight-bold;
+$microformat-abbr-font-decoration: none;
 
 // Alert Boxes
 
@@ -284,7 +267,6 @@ $hr-margin: rem-calc(5);
 // $block-grid-elements: 12;
 // $block-grid-default-spacing: rem-calc(20);
 // $align-block-grid-to-grid: false;
-
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 // $block-grid-media-queries: true;
@@ -583,39 +565,6 @@ $hr-margin: rem-calc(5);
 // We use this to control any elments within list items
 // $inline-list-children-display: block;
 
-// Joyride
-
-// $include-html-joyride-classes: $include-html-classes;
-
-// Controlling default Joyride styles
-// $joyride-tip-bg: #333;
-// $joyride-tip-default-width: 300px;
-// $joyride-tip-padding: rem-calc(18 20 24);
-// $joyride-tip-border: solid 1px #555;
-// $joyride-tip-radius: 4px;
-// $joyride-tip-position-offset: 22px;
-
-// Here, we're setting the tip dont styles
-// $joyride-tip-font-color: #fff;
-// $joyride-tip-font-size: rem-calc(14);
-// $joyride-tip-header-weight: $font-weight-bold;
-
-// This changes the nub size
-// $joyride-tip-nub-size: 10px;
-
-// This adjusts the styles for the timer when its enabled
-// $joyride-tip-timer-width: 50px;
-// $joyride-tip-timer-height: 3px;
-// $joyride-tip-timer-color: #666;
-
-// This changes up the styles for the close button
-// $joyride-tip-close-color: #777;
-// $joyride-tip-close-size: 24px;
-// $joyride-tip-close-weight: $font-weight-normal;
-
-// When Joyride is filling the screen, we use this style for the bg
-// $joyride-screenfill: rgba(0,0,0,0.5);
-
 // Keystrokes
 
 // $include-html-keystroke-classes: $include-html-classes;
@@ -722,48 +671,6 @@ $hr-margin: rem-calc(5);
 // Transition Variables
 // $menu-slide: "transform 500ms ease";
 
-// Orbit
-
-// $include-html-orbit-classes: $include-html-classes;
-
-// We use these to control the caption styles
-// $orbit-container-bg: none;
-// $orbit-caption-bg: rgba(51,51,51, 0.8);
-// $orbit-caption-font-color: #fff;
-// $orbit-caption-font-size: rem-calc(14);
-// $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
-// $orbit-caption-padding: rem-calc(10 14);
-// $orbit-caption-height: auto;
-
-// We use these to control the left/right nav styles
-// $orbit-nav-bg: transparent;
-// $orbit-nav-bg-hover: rgba(0,0,0,0.3);
-// $orbit-nav-arrow-color: #fff;
-// $orbit-nav-arrow-color-hover: #fff;
-
-// We use these to control the timer styles
-// $orbit-timer-bg: rgba(255,255,255,0.3);
-// $orbit-timer-show-progress-bar: true;
-
-// We use these to control the bullet nav styles
-// $orbit-bullet-nav-color: #ccc;
-// $orbit-bullet-nav-color-active: #999;
-// $orbit-bullet-radius: rem-calc(9);
-
-// We use these to controls the style of slide numbers
-// $orbit-slide-number-bg: rgba(0,0,0,0);
-// $orbit-slide-number-font-color: #fff;
-// $orbit-slide-number-padding: rem-calc(5);
-
-// Hide controls on small
-// $orbit-nav-hide-for-small: true;
-// $orbit-bullet-hide-for-small: true;
-// $orbit-timer-hide-for-small: true;
-
-// Graceful Loading Wrapper and preloader
-// $wrapper-class: "slideshow-wrapper";
-// $preloader-class: "preloader";
-
 // Pagination
 
 // We use these to control the pagination container
@@ -818,58 +725,6 @@ $pagination-link-current-active-bg: $accent-light;
 // $panel-header-adjust: true;
 // $callout-panel-link-color: $primary-color;
 
-// Pricing Tables
-
-// $include-html-pricing-classes: $include-html-classes;
-
-// We use this to control the border color
-// $price-table-border: solid 1px #ddd;
-
-// We use this to control the bottom margin of the pricing table
-// $price-table-margin-bottom: rem-calc(20);
-
-// We use these to control the title styles
-// $price-title-bg: #333;
-// $price-title-padding: rem-calc(15 20);
-// $price-title-align: center;
-// $price-title-color: #eee;
-// $price-title-weight: $font-weight-normal;
-// $price-title-size: rem-calc(16);
-// $price-title-font-family: $body-font-family;
-
-// We use these to control the price styles
-// $price-money-bg: #f6f6f6  ;
-// $price-money-padding: rem-calc(15 20);
-// $price-money-align: center;
-// $price-money-color: #333;
-// $price-money-weight: $font-weight-normal;
-// $price-money-size: rem-calc(32);
-// $price-money-font-family: $body-font-family;
-
-
-// We use these to control the description styles
-// $price-bg: #fff;
-// $price-desc-color: #777;
-// $price-desc-padding: rem-calc(15);
-// $price-desc-align: center;
-// $price-desc-font-size: rem-calc(12);
-// $price-desc-weight: $font-weight-normal;
-// $price-desc-line-height: 1.4;
-// $price-desc-bottom-border: dotted 1px #ddd;
-
-// We use these to control the list item styles
-// $price-item-color: #333;
-// $price-item-padding: rem-calc(15);
-// $price-item-align: center;
-// $price-item-font-size: rem-calc(14);
-// $price-item-weight: $font-weight-normal;
-// $price-item-bottom-border: dotted 1px #ddd;
-
-// We use these to control the CTA area styles
-// $price-cta-bg: #fff;
-// $price-cta-align: center;
-// $price-cta-padding: rem-calc(20 20 0);
-
 // Progress Bar
 
 // $include-html-media-classes: $include-html-classes;
@@ -893,40 +748,6 @@ $pagination-link-current-active-bg: $accent-light;
 // $progress-meter-secondary-color: $secondary-color;
 // $progress-meter-success-color: $success-color;
 // $progress-meter-alert-color: $alert-color;
-
-// Reveal
-
-// $include-html-reveal-classes: $include-html-classes;
-
-// We use these to control the style of the reveal overlay.
-// $reveal-overlay-bg: rgba(#000, .45);
-// $reveal-overlay-bg-old: #000;
-
-// We use these to control the style of the modal itself.
-// $reveal-modal-bg: #fff;
-// $reveal-position-top: rem-calc(100);
-// $reveal-default-width: 80%;
-// $reveal-modal-padding: rem-calc(20);
-// $reveal-box-shadow: 0 0 10px rgba(#000,.4);
-
-// We use these to style the reveal close button
-// $reveal-close-font-size: rem-calc(40);
-// $reveal-close-top: rem-calc(8);
-// $reveal-close-side: rem-calc(11);
-// $reveal-close-color: #aaa;
-// $reveal-close-weight: $font-weight-bold;
-
-// We use this to set the default radius used throughout the core.
-// $reveal-radius: $global-radius;
-// $reveal-round: $global-rounded;
-
-// We use these to control the modal border
-// $reveal-border-style: solid;
-// $reveal-border-width: 1px;
-// $reveal-border-color: #666;
-
-// $reveal-modal-class: "reveal-modal";
-// $close-reveal-modal-class: "close-reveal-modal";
 
 // Side Nav
 
@@ -1241,39 +1062,5 @@ $topbar-menu-icon-color-toggled: $font-color-dark;
 //
 
 // $include-html-visibility-classes: $include-html-classes;
-// $include-table-visibility-classes: true;
-// $include-legacy-visibility-classes: true;
-
-//
-// RANGE SLIDER
-//
-
-// $include-html-range-slider-classes: $include-html-classes;
-
-// These variabels define the slider bar styles
-// $range-slider-bar-width: 100%;
-// $range-slider-bar-height: rem-calc(16);
-
-// $range-slider-bar-border-width: 1px;
-// $range-slider-bar-border-style: solid;
-// $range-slider-bar-border-color: #ddd;
-// $range-slider-radius: $global-radius;
-// $range-slider-round: $global-rounded;
-// $range-slider-bar-bg-color: #fafafa;
-
-// Vertical bar styles
-// $range-slider-vertical-bar-width: rem-calc(16);
-// $range-slider-vertical-bar-height: rem-calc(200);
-
-// These variabels define the slider handle styles
-// $range-slider-handle-width: rem-calc(32);
-// $range-slider-handle-height: rem-calc(22);
-// $range-slider-handle-position-top: rem-calc(-5);
-// $range-slider-handle-bg-color: $primary-color;
-// $range-slider-handle-border-width: 1px;
-// $range-slider-handle-border-style: solid;
-// $range-slider-handle-border-color: none;
-// $range-slider-handle-radius: $global-radius;
-// $range-slider-handle-round: $global-rounded;
-// $range-slider-handle-bg-hover-color: scale-color($primary-color, $lightness: -12%);
-// $range-slider-handle-cursor: pointer;
+$include-table-visibility-classes: true;
+$include-legacy-visibility-classes: false;
