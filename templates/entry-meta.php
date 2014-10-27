@@ -1,6 +1,6 @@
 <ul class="entry-meta">
   <li>
-    <time class="published" datetime="<?php echo get_the_time('c'); ?>">Posted:<?php echo get_the_date(); ?></time>
+    <time class="published" datetime="<?php echo get_the_time('c'); ?>">Posted: <?php echo get_the_date(); ?></time>
   </li>
   <li>
     <span><i class="fa fa-circle"></i></span>
