@@ -9,7 +9,7 @@
         <h1>James DiGioia</h1>
       </div>
 
-      <div id="social">
+      <div id="social-links">
         <i class="fa fa-facebook-square"></i>
         <i class="fa fa-twitter-square"></i>
         <i class="fa fa-linkedin-square"></i>
