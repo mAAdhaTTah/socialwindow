@@ -159,8 +159,8 @@ $code-font-weight: $font-weight-bold;
 // We use these to style anchors
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
-$anchor-font-color: $header-font-color;
-$anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
+$anchor-font-color: $accent-light;
+$anchor-font-color-hover: scale-color($accent-light, $lightness: -24%);
 
 // We use these to style the <hr> element
 $hr-border-width: 1px;
