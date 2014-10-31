@@ -12,5 +12,12 @@
   .entry-title {
     margin-bottom: 30px;
   }
-  footer { }
+  p.threads-post-notice {
+    background-color: darken( $secondary-color, 5% );
+    color: $accent-dark;
+    font-size: 90%;
+    margin: -10px -10px 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
 }

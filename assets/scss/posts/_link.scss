@@ -69,4 +69,13 @@
       color: $primary-color;
     }
   }
+
+  p.threads-post-notice {
+    background-color: darken( $accent-dark, 5% );
+    color: $font-color-light;
+    font-size: 90%;
+    margin: -10px -10px 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
 }
