@@ -3,24 +3,15 @@
   padding: 30px;
   background-color: darken( $secondary-color, 7% );
 
-  .entry-content {
+  .gallery-thumb {
+    @include thumb;
+  }
 
-    .gallery-thumb {
-      @include thumb;
-    }
+  .gallery-last {
 
-    .gallery-last {
-      li {
+    li {
 
-        height: 100%;
-      }
-
-      a {
-        padding: 20px;
-        background-color: $accent-dark;
-        height: 100%;
-        color: $font-color-light;
-      }
+      height: 100%;
     }
 
   }
