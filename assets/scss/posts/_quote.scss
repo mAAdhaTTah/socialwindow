@@ -1,0 +1,26 @@
+.format-quote {
+
+
+  .entry-content {
+    background-color: $accent-dark;
+    border-radius: $global-radius;
+    margin: -30px -30px 30px;
+    padding: 30px;
+
+    blockquote {
+      * {
+        margin-bottom: 30px;
+        color: $font-color-light;
+      }
+
+      a {
+        color: $accent-light;
+        font-size: 150%;
+
+        &:hover {
+          color: lighten( $accent-light, 5% );
+        }
+      }
+    }
+  }
+}
