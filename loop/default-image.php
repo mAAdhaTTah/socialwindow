@@ -6,5 +6,5 @@
 <footer>
   <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
   <?php the_content(); ?>
-  <?php get_template_part('templates/entry-meta'); ?>
+  <?php get_template_part('partials/entry-meta'); ?>
 </footer>

@@ -1,4 +1,4 @@
-<?php get_template_part('templates/head'); ?>
+<?php get_template_part('partials/head'); ?>
 
   <body <?php body_class(); ?>>
 
@@ -10,7 +10,7 @@
 
     <?php
       do_action('get_header');
-      get_template_part('templates/header');
+      get_template_part('partials/header');
     ?>
 
     <div class="wrap" role="document">
@@ -19,7 +19,7 @@
       </main><!-- /.main -->
     </div><!-- /.content -->
 
-    <?php get_template_part('templates/footer'); ?>
+    <?php wp_footer(); ?>
 
   </body>
 </html>
