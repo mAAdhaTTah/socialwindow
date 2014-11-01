@@ -1,10 +1,40 @@
 .format-gallery {
-  margin: -30px -30px 50px;;
+  margin: -30px -30px 50px;
   padding: 30px;
   background-color: darken( $secondary-color, 7% );
 
+  a {
+    color: $accent-dark;
+  }
+
+  .gallery-wrap {
+    @include block-grid(
+      $per-row: 4
+    );
+
+    @media #{$small-only} {
+      @include block-grid(
+        $per-row: 6
+      );
+    }
+
+    & > li {
+      clear: none !important;
+      margin-right: 0;
+    }
+
+    li {
+      @media #{$small-only} {
+        padding-right: 5px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
   .gallery-thumb {
     @include thumb;
+
+
   }
 
   .gallery-last {
@@ -20,5 +50,9 @@
       height: 100%;
       color: $font-color-light;
     }
+  }
+
+  .entry-content {
+    padding: 10px;
   }
 }

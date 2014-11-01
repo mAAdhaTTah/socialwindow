@@ -20,7 +20,7 @@ function roots_setup() {
   add_theme_support( 'post-thumbnails' );
   set_post_thumbnail_size( '180', '180', true );
   add_image_size( 'gallery-thumb-medup', '160', '160', true );
-  add_image_size( 'gallery-thumb-small', '320', '320', true );
+  add_image_size( 'gallery-thumb-small', '90', '90', true );
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
