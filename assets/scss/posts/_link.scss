@@ -32,13 +32,13 @@
     font-size: rem-calc($rem-base * 1.1);
   }
 
-    a {
-      color: $primary-color;
+  a {
+    color: $primary-color;
 
-      &:hover {
-        color: darken( $secondary-color, 30% );
-      }
+    &:hover {
+      color: darken( $secondary-color, 30% );
     }
+  }
 
   .link-provider {
     font-size: rem-calc($rem-base * 0.6);
@@ -77,5 +77,9 @@
     margin: -10px -10px 20px;
     padding: 10px;
     border-radius: 5px;
+  }
+
+  code {
+    color: darken( $primary-color, 10% );
   }
 }
