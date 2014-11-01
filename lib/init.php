@@ -18,6 +18,7 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support( 'post-thumbnails' );
+  set_post_thumbnail_size( '180', '180', true );
   add_image_size( 'gallery-thumb-medup', '160', '160', true );
   add_image_size( 'gallery-thumb-small', '320', '320', true );
 

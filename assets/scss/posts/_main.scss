@@ -8,10 +8,13 @@
   }
 
   header { }
+
   .entry-content { }
+
   .entry-title {
     margin-bottom: 30px;
   }
+
   p.threads-post-notice {
     background-color: darken( $secondary-color, 5% );
     color: $accent-dark;
@@ -19,5 +22,10 @@
     margin: -10px -10px 20px;
     padding: 10px;
     border-radius: 5px;
+  }
+
+  .entry-thumbnail {
+    float: left;
+    margin: 20px;
   }
 }
