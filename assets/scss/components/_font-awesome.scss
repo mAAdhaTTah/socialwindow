@@ -1,0 +1,77 @@
+.fa-facebook-square {
+  color: #3B5998;
+}
+
+.fa-twitter-square {
+  color: #3CF;
+}
+
+.fa-linkedin-square {
+  color: #4875B4;
+}
+
+.fa-google-plus-square {
+  color: #C63D2D;
+}
+
+.fa-instagram {
+  color: #4E433C;
+}
+
+.fa-tumblr-square {
+  color: #2B4964;
+}
+
+.fa-github-square {
+  color: #999;
+}
+
+.fa-reddit-square {
+  color: #336699;
+}
+
+.fa-stack-exchange {
+  color: #153F85;
+}
+
+@mixin fa-signin($content) {
+    @include grid-column(
+      // Control the number of columns
+      $columns: 6,
+      // Specify the float direction
+      $float: left
+    );
+
+    position: relative;
+    padding: 15px 10px 10px;
+    background-color: darken( $secondary-color, 5% );
+    color: darken( $accent-dark, 15% );
+    border-radius: $small-radius;
+    font-size: $h6-font-size * .7;
+
+    @media #{$small-only} {
+      @include grid-column(
+        // Control the number of columns
+        $columns: 12,
+        // Set to true to remove column padding
+        $collapse: false,
+        // Specify the float direction
+        $float: left
+      );
+      margin-bottom: 10px;
+    }
+
+    @include fa-content($content);
+}
+
+@mixin fa-content($content) {
+    &:before {
+    content: $content;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    padding-right: 10px;
+    font-size: 110%;
+  }
+}
