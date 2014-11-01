@@ -18,9 +18,11 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size( '180', '180', true );
-  add_image_size( 'gallery-thumb-medup', '160', '160', true );
-  add_image_size( 'gallery-thumb-small', '90', '90', true );
+  set_post_thumbnail_size( 180, 180, true );
+  add_image_size( 'gallery-thumb-medup', 160, 160, true );
+  add_image_size( 'gallery-thumb-small', 90, 90, true );
+  add_image_size( 'image-main-small', 640, 0, false );
+  add_image_size( 'image-main-medup', 720, 0, false );
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
