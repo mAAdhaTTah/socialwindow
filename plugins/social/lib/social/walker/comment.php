@@ -15,7 +15,7 @@ final class Social_Walker_Comment extends Walker_Comment {
 	 * @param int $depth Depth of comment.
 	 * @param array $args Uses 'style' argument for type of HTML list.
 	 */
-	public function start_lvl(&$output, $depth = 0, $args = array()) {
+	public function start_lvl(&$output, $depth, $args) {
 		$GLOBALS['comment_depth'] = $depth + 1;
 
 		switch ($args['style']) {
@@ -39,7 +39,7 @@ final class Social_Walker_Comment extends Walker_Comment {
 	 * @param int $depth Depth of comment.
 	 * @param array $args Will only append content if style argument value is 'ol' or 'ul'.
 	 */
-	public function end_lvl(&$output, $depth = 0, $args = array()) {
+	public function end_lvl(&$output, $depth, $args) {
 		$GLOBALS['comment_depth'] = $depth + 1;
 
 		switch ($args['style']) {

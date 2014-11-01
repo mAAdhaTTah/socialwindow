@@ -184,7 +184,7 @@ abstract class Social_Service_Account {
 	 *
 	 * @return string
 	 */
-	public function child_account_avatar($child_account) {
+	public function child_account_avatar($child_account = null) {
 		return $this->_avatar();
 	}
 
