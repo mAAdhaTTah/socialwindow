@@ -48,25 +48,6 @@ add_filter('cfth_thread_notice', 'sw_thread_notice', 10, 2);
  * Comment out what you don't need, and uncomment what you want.
  */
 
-
-
-//
-//		Adds foundations flex video container around oembed embeds
-//
-//////////////////////////////////////////////////////////////////////
-
-
-add_filter('embed_oembed_html', 'embed_oembed', 99, 4);
-function embed_oembed($html, $url, $attr, $post_id) {
-  return '<div class="flex-video">' . $html . '</div>';
-}
-
-
-
-
-
-
-
 //
 //		Fixes overlapping adminbar for Foundations top-bar
 //
