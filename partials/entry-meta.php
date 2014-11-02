@@ -6,7 +6,7 @@
     <span><i class="fa fa-circle"></i></span>
   </li>
   <li>
-    <span class="byline author"><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?php echo get_the_author(); ?></a></p>
+    <span class="byline author"><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?php echo get_the_author(); ?></a></span>
   </li>
   <li>
     <span><i class="fa fa-circle"></i></span>
