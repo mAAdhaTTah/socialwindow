@@ -1,7 +1,7 @@
 {
-  "name": "gromf",
-  "version": "0.0.2",
-  "description": "Wordpress starter theme, based on Roots",
+  "name": "socialwindow",
+  "version": "0.1.0",
+  "description": "Social tumblog theme for SocialDen",
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "^3.8.9",
@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/schikulski/gromf.git"
+    "url": "https://github.com/mAAdhaTTah/socialwindow.git"
   },
-  "author": "Simen Schikulski",
-  "license": "ISC",
+  "author": "mAAdhaTTah <jamesorodig@gmail.com>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/schikulski/gromf/issues"
+    "url": "https://github.com/mAAdhaTTah/socialwindow/issues"
   },
-  "homepage": "https://github.com/schikulski/gromf"
+  "homepage": "https://github.com/mAAdhaTTah/socialwindow"
 }
