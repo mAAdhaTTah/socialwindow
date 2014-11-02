@@ -17,6 +17,7 @@
     "gulp-size": "*",
     "gulp-svgmin": "*",
     "gulp-uglify": "*",
+    "gulp-zip": "^2.0.2",
     "jshint-stylish": "*",
     "node-bourbon": "^1.2.3"
   },

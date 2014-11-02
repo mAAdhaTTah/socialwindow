@@ -54,8 +54,8 @@ var zip = require('gulp-zip');                     // Zip up dist
       .pipe(rename({suffix: '.min'}))                                     // Rename it
       .pipe(uglify())                                                     // Uglify(minify)
       .pipe(gulp.dest('assets/js/'))                                      // Set destination to assets/js
-      .pipe(livereload());                                                // Reloads server
-      util.log(util.colors.yellow('Javascripts compiled and minified'));  // Output to terminal
+      .pipe(livereload())                                                 // Reloads server
+      .pipe(notify('Javascripts compiled and minified'));                 // Output to notification
   });
 
 //
@@ -63,11 +63,11 @@ var zip = require('gulp-zip');                     // Zip up dist
 //
 //////////////////////////////////////////////////////////////////////
   gulp.task('copy', function(){
-    gulp.src('bower_components/modernizr/modernizr.js')   // Gets Modernizr.js
+    return gulp.src('bower_components/modernizr/modernizr.js')   // Gets Modernizr.js
     .pipe(uglify())                                       // Uglify(minify)
     .pipe(rename({suffix: '.min'}))                       // Rename it
-    .pipe(gulp.dest('assets/js/'));                       // Set destination to assets/js
-    util.log(util.colors.yellow('Files copied'));         // Output to terminal
+    .pipe(gulp.dest('assets/js/'))                        // Set destination to assets/js
+    .pipe(notify('Files copied'));                        // Output to notification
   });
 
 //
@@ -75,9 +75,9 @@ var zip = require('gulp-zip');                     // Zip up dist
 //
 //////////////////////////////////////////////////////////////////////
   gulp.task('jshint', function() {
-      gulp.src('assets/js/_*.js')
-          .pipe(jshint())
-          .pipe(jshint.reporter('jshint-stylish'));
+    return gulp.src('assets/js/_*.js')
+      .pipe(jshint())
+      .pipe(jshint.reporter('jshint-stylish'));
   });
 
 //
@@ -85,17 +85,42 @@ var zip = require('gulp-zip');                     // Zip up dist
 //
 //////////////////////////////////////////////////////////////////////
   gulp.task('svgmin', function() {
-    gulp.src('assets/img/*.svg')                          // Gets all SVGs
+    return gulp.src('assets/img/*.svg')                          // Gets all SVGs
     .pipe(svgmin())                                       // Minifies SVG
     .pipe(gulp.dest('assets/img_min/'))                   // Set destination to assets/img_min/
     .pipe(notify('SVGs minified'));                        // Output to notification
   });
 
   gulp.task('imagemin', function () {
-    gulp.src(['assets/img/*', '!assets/img/*.svg'])       // Gets all images except SVGs
-    .pipe(imagemin())                                     // Minifies
+    return gulp.src(['assets/img/*', '!assets/img/*.svg'])        // Gets all images except SVGs
+    .pipe(imagemin())                                      // Minifies
     .pipe(gulp.dest('assets/img_min/'))                    // Set destination to assets/img_min/
     .pipe(notify('Images minified'));                        // Output to notification
+  });
+
+//
+//    Builds the theme into a .zip
+//
+//////////////////////////////////////////////////////////////////////
+  gulp.task('zip',['sass', 'jshint', 'javascripts', 'copy'], function() {
+    var server = livereload.listen();
+
+    return gulp.src([
+      '!**/.*',
+      '!node_modules/**',
+      '!node_modules',
+      '!bower_components/**',
+      '!bower_components',
+      '!assets/scss/**',
+      '!assets/scss',
+      '**/**',
+    ]).pipe(zip('theme.zip'))
+      .pipe(gulp.dest('.'))
+      .pipe(notify('Theme zip built'));
+  });
+
+  gulp.task('build',['zip'], function() {
+      process.exit(0);
   });
 
 //
