@@ -117,7 +117,7 @@ var zip = require('gulp-zip');                     // Zip up dist
       '!assets/scss/**',
       '!assets/scss',
       '**/**',
-    ]).pipe(zip('theme.zip'))
+    ]).pipe(zip('socialwindow.zip'))
       .pipe(gulp.dest('.'))
       .pipe(notify('Theme zip built'));
   });
