@@ -33,13 +33,13 @@ Import Roots Components - Do your SASS awesomeness here! Goodspeed young travele
 @import "layouts/_comments";         // Comments styling
 @import "layouts/_pages";            // Page styling
 @import "posts/_main";               // Post styling
-@import "posts/_link";               // Link-type styling
-@import "posts/_image";              // Image-type styling
-@import "posts/_status";             // Status-type styling
-@import "posts/_gallery";            // Gallery-type styling
-@import "posts/_video";              // Video-type styling
-@import "posts/_quote";              // Quote-type styling
+@import "posts/_link";               // Link format styling
+@import "posts/_image";              // Image format styling
+@import "posts/_status";             // Status format styling
+@import "posts/_gallery";            // Gallery format styling
+@import "posts/_video";              // Video format styling
 @import "posts/_audio";              // Audio format styling
+@import "posts/_quote";              // Quote format styling
 
 
 /*==========  Foundation Media Queries - copy/paste from here if needed  ==========*/
