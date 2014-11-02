@@ -81,7 +81,11 @@ class SocialWindow_Command extends WP_CLI_Command {
   function setkey( $args, $assoc_args ) {
     list( $key ) = $args;
 
-    update_option( '_embedly_api_key', $key );
+    $result = update_option( '_embedly_api_key', $key );
+
+    if ( ! $result ) {
+      WP_CLI::error( __("Update Embedly API key failed", 'roots' ) );
+    }
 
     WP_CLI::success( __("Updated Embedly API key", 'roots' ) );
   }
