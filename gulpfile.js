@@ -43,6 +43,7 @@ var zip = require('gulp-zip');                     // Zip up dist
       // Gets Foundation JS change to only include the scripts you'll need
       'bower_components/foundation/js/foundation/foundation.js',
       'bower_components/foundation/js/foundation/foundation.abide.js',
+      'bower_components/foundation/js/foundation/foundation.alert.js',
       'bower_components/foundation/js/foundation/foundation.clearing.js',
       'bower_components/foundation/js/foundation/foundation.equalizer.js',
       'bower_components/foundation/js/foundation/foundation.interchange.js',
