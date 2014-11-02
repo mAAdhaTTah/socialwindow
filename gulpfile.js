@@ -109,6 +109,7 @@ var zip = require('gulp-zip');                     // Zip up dist
     return gulp.src([
       '!**/.*',
       '!**/*.md',
+      '!**/*.sublime*',
       '!node_modules/**',
       '!node_modules',
       '!bower_components/**',
