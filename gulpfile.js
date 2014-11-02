@@ -7,7 +7,7 @@ var uglify = require('gulp-uglify');               // Uglify javascript
 var svgmin = require('gulp-svgmin');               // SVG minify
 var imagemin = require('gulp-imagemin');           // Image minify
 var rename = require('gulp-rename');               // Rename files
-var util = require('gulp-util');                   // Writing stuff
+var notify = require("gulp-notify");               // Alerting stuff
 var livereload = require('gulp-livereload');       // LiveReload
 var jshint = require('gulp-jshint');               // jshint
 var zip = require('gulp-zip');                     // Zip up dist
@@ -17,16 +17,19 @@ var zip = require('gulp-zip');                     // Zip up dist
 //
 //////////////////////////////////////////////////////////////////////
   gulp.task('sass', function (){
-    gulp.src([
+    return gulp.src([
       'bower_components/foundation/scss/normalize.scss',         // Gets normalize
       'assets/scss/app.scss'])                                   // Gets the apps scss
-      .pipe(sass({includePaths: require('node-bourbon').includePaths, style: 'compressed', errLogToConsole: true}))  // Compile sass
+      .pipe(sass({
+        includePaths: require('node-bourbon').includePaths,
+        style: 'compressed', errLogToConsole: true
+      }))                                                        // Compile sass
       .pipe(concat('main.css'))                                  // Concat all css
       .pipe(rename({suffix: '.min'}))                            // Rename it
       .pipe(minifycss())                                         // Minify the CSS
       .pipe(gulp.dest('assets/css/'))                            // Set the destination to assets/css
-      .pipe(livereload());                                       // Reloads server
-      util.log(util.colors.yellow('Sass compiled & minified'));  // Output to terminal
+      .pipe(livereload())                                        // Reloads server
+      .pipe(notify('Sass compiled & minified'));                 // Output to notification
   });
 
 //
@@ -34,7 +37,7 @@ var zip = require('gulp-zip');                     // Zip up dist
 //
 //////////////////////////////////////////////////////////////////////
   gulp.task('javascripts', function(){
-    gulp.src([
+    return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',     // Gets Jquery
       'bower_components/fastclick/lib/fastclick.js',      // Gets fastclick
       // Gets Foundation JS change to only include the scripts you'll need
@@ -84,15 +87,15 @@ var zip = require('gulp-zip');                     // Zip up dist
   gulp.task('svgmin', function() {
     gulp.src('assets/img/*.svg')                          // Gets all SVGs
     .pipe(svgmin())                                       // Minifies SVG
-    .pipe(gulp.dest('assets/img_min/'));                  // Set destination to assets/img_min/
-    util.log(util.colors.yellow('SVGs minified'));        // Output to terminal
+    .pipe(gulp.dest('assets/img_min/'))                   // Set destination to assets/img_min/
+    .pipe(notify('SVGs minified'));                        // Output to notification
   });
 
   gulp.task('imagemin', function () {
     gulp.src(['assets/img/*', '!assets/img/*.svg'])       // Gets all images except SVGs
     .pipe(imagemin())                                     // Minifies
-    .pipe(gulp.dest('assets/img_min/'));                  // Set destination to assets/img_min/
-    util.log(util.colors.yellow('Images minified'));      // Output to terminal
+    .pipe(gulp.dest('assets/img_min/'))                    // Set destination to assets/img_min/
+    .pipe(notify('Images minified'));                        // Output to notification
   });
 
 //

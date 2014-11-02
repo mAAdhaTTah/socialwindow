@@ -11,12 +11,12 @@
     "gulp-jshint": "*",
     "gulp-livereload": "*",
     "gulp-minify-css": "*",
+    "gulp-notify": "^2.0.0",
     "gulp-rename": "*",
     "gulp-sass": "1.1.0",
     "gulp-size": "*",
     "gulp-svgmin": "*",
     "gulp-uglify": "*",
-    "gulp-util": "*",
     "jshint-stylish": "*",
     "node-bourbon": "^1.2.3"
   },
