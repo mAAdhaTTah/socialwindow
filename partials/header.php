@@ -10,15 +10,33 @@
       </div>
 
       <div id="social-links">
-        <i class="fa fa-facebook-square"></i>
-        <i class="fa fa-twitter-square"></i>
-        <i class="fa fa-linkedin-square"></i>
-        <i class="fa fa-google-plus-square"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-tumblr-square"></i>
-        <i class="fa fa-github-square"></i>
-        <i class="fa fa-reddit-square"></i>
-        <i class="fa fa-stack-exchange"></i>
+        <a href="https://www.facebook.com/james.digioia">
+          <i class="fa fa-facebook-square"></i>
+        </a>
+        <a href="https://twitter.com/JamesDiGioia">
+          <i class="fa fa-twitter-square"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jamesdigioia">
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+        <a href="https://plus.google.com/+JamesDiGioia">
+          <i class="fa fa-google-plus-square"></i>
+        </a>
+        <a href="http://instagram.com/jamesdigioia">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="http://jamesdigioia.tumblr.com/">
+          <i class="fa fa-tumblr-square"></i>
+        </a>
+        <a href="https://github.com/mAAdhaTTah/">
+          <i class="fa fa-github-square"></i>
+        </a>
+        <a href="www.reddit.com/user/maadhattah">
+          <i class="fa fa-reddit-square"></i>
+        </a>
+        <a href="http://stackexchange.com/users/3267217/maadhattah">
+          <i class="fa fa-stack-exchange"></i>
+        </a>
       </div>
 
       <div id="subtitle">
