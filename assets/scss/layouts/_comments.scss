@@ -23,6 +23,17 @@
     border-radius: $small-radius;
   }
 
+  #respond {
+    @include clearfix;
+  }
+
+  .social-comment #respond #reply-title {
+    @include grid-column(12);
+
+    margin: 0 -10px 10px;
+    padding: 0 20px 0 30px;
+  }
+
   .social-sign-in-links {
     @include grid-row();
     margin: 20px 0;
