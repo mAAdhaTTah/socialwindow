@@ -515,13 +515,9 @@ $block-grid-media-queries: false;
 // $legend-padding: rem-calc(0 3);
 
 // We use these to style the prefix and postfix input elements
-// $input-prefix-bg: scale-color(#fff, $lightness: -5%);
-// $input-prefix-border-color: scale-color(#fff, $lightness: -20%);
-// $input-prefix-border-size: 1px;
-// $input-prefix-border-type: solid;
-// $input-prefix-overflow: hidden;
-// $input-prefix-font-color: #333;
-// $input-prefix-font-color-alt: #fff;
+$input-prefix-border-type: none;
+$input-prefix-overflow: hidden;
+$input-prefix-font-color: $font-color-dark;
 
 // We use these to style the error states for inputs and labels
 // $input-error-message-padding: rem-calc(6 9 9);

@@ -6,4 +6,8 @@
     background-color: darken( $secondary-color, 20% );
     border-radius: $global-radius;
   }
+
+  .single & {
+    margin-bottom: 30px;
+  }
 }

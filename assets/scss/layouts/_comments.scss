@@ -1,0 +1,343 @@
+#social {
+
+  /**
+   * Subtext, help text, etc
+   */
+  .social-help,
+  .social-psst {
+    color: #999;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+  }
+
+  .social-help {
+    font-style: italic;
+  }
+
+  #reply-title {
+    background-color: $accent-dark;
+    font-size: $h6-font-size;
+    color: $font-color-light;
+    margin: 0 -20px 10px;
+    padding: 0 30px;
+    border-radius: $small-radius;
+  }
+
+  .social-sign-in-links {
+    @include grid-row();
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: $small-radius;
+    text-align: center;
+
+    .social-twitter {
+      @include fa-signin( $content: "\f081" );
+    }
+
+    .social-facebook {
+      @include fa-signin( $content: "\f082" );
+    }
+  }
+
+  .social-divider, .cf-clearfix {
+    background-color: $accent-dark;
+    color: $font-color-light;
+    margin: 0 0px 10px;
+    padding: 2px 0;
+    text-align: center;
+    border-radius: $small-radius;
+  }
+
+  .social-identity {
+    @include clearfix();
+    @include grid-row();
+    margin-bottom: 15px;
+
+    .social-avatar {
+      @include grid-column(
+        // Control the number of columns
+        $columns: 2,
+        // Set to true to remove column padding
+        $collapse: true,
+        // Specify the float direction
+        $float: left
+      );
+      padding: 0 5px;
+
+      img {
+        float: right;
+      }
+    }
+  }
+
+  .social-input-row-comment .social-label {
+    display: none;
+  }
+
+  .social-input-row {
+    @include grid-row();
+    padding: 0 10px 10px;
+
+    .social-psst {
+      padding: 10px;
+    }
+
+    .social-label {
+      @include prefix-postfix-base();
+      @include grid-column(
+        // Control the number of columns
+        $columns: 2,
+        // Set to true to remove column padding
+        $collapse: true,
+        // Specify the float direction
+        $float: left
+      );
+    }
+
+    input[type=text], textarea, select {
+      @include grid-column(
+        // Control the number of columns
+        $columns: 10,
+        // Set to false to remove column padding
+        $collapse: true,
+        // Specify the float direction
+        $float: right
+      );
+
+      &#email {
+        @include grid-column(
+          // Control the number of columns
+          $columns: 8,
+          // Set to false to remove column padding
+          $collapse: true,
+          // Specify the float direction
+          $float: left
+        );
+      }
+
+      &#comment {
+        height: $paragraph-line-height * 10em;
+      }
+
+      &#post_accounts {
+         padding-left: 10px;
+      }
+    }
+
+    small.social-help {
+      @include prefix-postfix-base();
+      @include grid-column(
+        // Control the number of columns
+        $columns: 2,
+        // Set to false to remove column padding
+        $collapse: true,
+        // Specify the float direction
+        $float: right
+      );
+    }
+  }
+
+  .form-submit {
+    @include grid-column(
+      // Control the number of columns
+      $columns: 10,
+      // Set to false to remove column padding
+      $collapse: true,
+      // Specify the float direction
+      $float: right
+    );
+
+    input[type=submit]#submit {
+      @include button(
+        // $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
+        $padding: rem-calc(10),
+        // Primary color set in settings file. Default: $primary-color.
+        $bg: $accent-dark,
+        // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+        $radius: false
+      );
+      font-size: $paragraph-line-height;
+      margin-left: 7.5px;
+    }
+  }
+
+  .comment-form {
+    @include clearfix();
+  }
+
+  .social-nav {
+    @include block-grid(
+      $per-row: 5
+    );
+    padding: 10px;
+
+    li {
+      font-size: $small-font-size;
+      padding: 2px;
+      background-color: $secondary-color;
+      border-radius: $global-radius;
+      text-align: center;
+
+      &.social-all a {
+        @include fa-content("\f086");
+      }
+
+      &.social-wordpress a {
+        @include fa-content("\f19a");
+        color: $font-color-dark;
+      }
+
+      &.social-twitter a {
+        @include fa-content("\f081");
+        color: #3CF;
+      }
+
+      &.social-facebook a {
+        @include fa-content("\f082");
+        color: #3B5998;
+      }
+
+      &.social-pingback a {
+        @include fa-content("\f140");
+        color: $accent-dark;
+      }
+
+      @media #{$small-only} {
+        height: $paragraph-line-height;
+        span {
+          display: none;
+        }
+
+        a:before {
+          padding-right: 0 !important;
+        }
+      }
+
+    }
+  }
+
+  .social-last-reply-when {
+    display:none;
+  }
+
+  .social-items {
+    @include grid-row();
+    padding-left: 30px;
+    margin-bottom: 10px;
+
+    &.social-comment-collapse {
+      filter: alpha(opacity = 30);
+      opacity: .3;
+    }
+  }
+
+  .social-items-icon {
+    line-height: $paragraph-line-height;
+    float: left;
+  }
+
+  .social-facebook > .social-items-icon {
+    @include fa-content("\f087");
+  }
+
+  .social-twitter > .social-items-icon {
+    @include fa-content("\f079");
+  }
+
+  .social-items-comments {
+    float: left;
+  }
+
+  .social-commentlist {
+
+    li {
+      @include grid-row();
+      list-style: none;
+
+      .social-comment-header {
+        @include grid-column(2.5);
+      }
+
+      .social-comment-author {
+        border: none;
+        margin-bottom: 0;
+        padding: 0 10px;
+
+        img {
+          float: right;
+          margin: 5px;
+          @include clearfix;
+        }
+
+        .social-fn {
+          float: right;
+          text-align: right;
+          margin-top: 5px;
+        }
+      }
+
+      .social-posted-from {
+        display: none;
+      }
+
+      .social-comment-meta {
+        margin-bottom: 10px;
+        font-size: $small-font-size;
+        float: right;
+      }
+
+      .social-comment-body {
+        @include grid-column(
+          $columns: 9.5,
+          $float: right,
+          $last-column: true
+        );
+      }
+
+      .entry-meta {
+        @include grid-column(12);
+        padding-left: 30px;
+      }
+    }
+  }
+
+  .social-children {
+    @include grid-column(
+      $columns: 10,
+      $float: right,
+      $last-column: true
+    );
+  }
+
+  .social-replied {
+    display: none;
+  }
+
+  .social-comment-collapse > .social-comment-inner > {
+
+    .social-comment-header {
+      filter: alpha(opacity = 30);
+      font-size: 12px;
+      min-height: 18px;
+      opacity: .3;
+
+      .social-fn {
+        font-size: 12px;
+        position: relative;
+        left: -10px;
+      }
+
+      .social-comment-author img {
+        width: 16px;
+        height: 16px;
+        top: -1px;
+      }
+    }
+
+    .social-comment-body,
+    .social-actions,
+    .social-items-comment {
+      display: none;
+    }
+  }
+}

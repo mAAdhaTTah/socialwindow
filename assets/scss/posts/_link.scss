@@ -82,4 +82,8 @@
   code {
     color: darken( $primary-color, 10% );
   }
+
+  .single & {
+    margin-bottom: 50px;
+  }
 }

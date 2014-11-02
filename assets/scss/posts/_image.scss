@@ -16,4 +16,8 @@
   .entry-title {
     font-size: $h6-font-size;
   }
+
+  .single & {
+    margin-bottom: 50px;
+  }
 }

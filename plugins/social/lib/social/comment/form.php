@@ -357,7 +357,7 @@ final class Social_Comment_Form {
 				$accounts[$key] = $service->accounts();
 			}
 		}
-		return Social_View::factory('comment/logged_in_as', array(
+		return Social_View::factory('../../../comments/logged_in_as', array(
 			'services' => $services,
 			'accounts' => $accounts,
 			'current_user' => $this->current_user,
