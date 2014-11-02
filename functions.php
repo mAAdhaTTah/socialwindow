@@ -14,7 +14,6 @@ $roots_includes = array(
   'lib/init.php',                   // Initial theme setup and constants
   'lib/wrapper.php',                // Theme wrapper class
   'lib/config.php',                 // Configuration
-  'lib/activation.php',             // Theme activation
   'lib/titles.php',                 // Page titles
   'lib/nav.php',                    // Custom nav modifications
   'lib/pagination.php',             // Custom pagination
