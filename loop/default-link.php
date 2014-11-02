@@ -1,6 +1,6 @@
 <div class="entry-content">
   <?php the_content(); ?>
-  <?php get_template_part('templates/entry-meta'); ?>
+  <?php get_template_part('partials/entry-meta'); ?>
 </div>
 <footer class="link-meta">
   <div class="link-info">
