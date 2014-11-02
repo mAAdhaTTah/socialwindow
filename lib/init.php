@@ -34,6 +34,7 @@ function roots_setup() {
       'image',
       'gallery',
       'video',
+      'audio',
       'quote',
     )
   );
@@ -46,6 +47,7 @@ function roots_setup() {
       'image',
       'gallery',
       'video',
+      'audio',
       'quote',
     )
   );
