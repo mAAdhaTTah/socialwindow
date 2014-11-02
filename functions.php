@@ -30,3 +30,7 @@ foreach ($roots_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+if ( defined('WP_CLI') && WP_CLI ) {
+    include 'lib/command.php';
+}
