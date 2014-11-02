@@ -1,6 +1,6 @@
 <?php
 /**
- * Updates old data to new theme
+ * Some helper commands for the Socialwindow theme.
  */
 class SocialWindow_Command extends WP_CLI_Command {
 
@@ -65,6 +65,25 @@ class SocialWindow_Command extends WP_CLI_Command {
         WP_CLI::success( __("Updated post: {$post_id}", 'roots' ) );
       }
     }
+  }
+  /**
+   * Sets the Embedly API key.
+   *
+   * ## OPTIONS
+   *
+   * <key>
+   * : The API key for Embedly.
+   *
+   * ## EXAMPLES
+   *
+   *     wp socwin setkey 1234567890
+   */
+  function setkey( $args, $assoc_args ) {
+    list( $key ) = $args;
+
+    update_option( '_embedly_api_key', $key );
+
+    WP_CLI::success( __("Updated Embedly API key", 'roots' ) );
   }
 }
 

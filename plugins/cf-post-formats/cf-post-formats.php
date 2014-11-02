@@ -135,13 +135,19 @@ function cfpf_format_link_save_post($post_id) {
  * @param  int    $post_id ID of the post to save metadata to
  * @param  string $url     URL to get Embedly data for
  */
-function get_embedly_metadata( $post_id, $url ) {
+function get_embedly_metadata( $post_id, $url = '' ) {
   if ( empty( $url ) ) {
     return;
   }
 
+  $api_key = get_option( '_embedly_api_key', $default );
+
+  if ( empty($api_key) ) {
+    return;
+  }
+
   $api = new Embedly\Embedly( array(
-    'key' => '89148a2eb926435099a1d322922b744f'
+    'key' => $api_key
   ) );
 
   $response = $api->oembed( $url );
