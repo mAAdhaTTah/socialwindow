@@ -31,17 +31,6 @@ function sw_thread_notice( $notice_html, $post ) {
 }
 add_filter('cfth_thread_notice', 'sw_thread_notice', 10, 2);
 
-
-
-
-
-
-
-
-
-
-
-
 /**
  * Custom functions, all this is optional
  * Mosly cleaning up the admin interface.
@@ -53,7 +42,6 @@ add_filter('cfth_thread_notice', 'sw_thread_notice', 10, 2);
 //
 //////////////////////////////////////////////////////////////////////
 
-
 add_action('wp_head', 'admin_bar_fix', 5);
 function admin_bar_fix() {
   if( is_admin_bar_showing() ) {
@@ -64,17 +52,10 @@ function admin_bar_fix() {
   }
 }
 
-
-
-
-
-
-
 //
 //		Adds Foundation classes to next/prev buttons
 //
 //////////////////////////////////////////////////////////////////////
-
 
 add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
@@ -83,24 +64,11 @@ function posts_link_attributes() {
     return 'class="button tiny"';
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 //
 //    Adds the livereload script. Primarily for testing other devices on same network as web server
 //    Change the IP address to the IP of the computer thats running the "gulp" command (likely your dev computer)
 //
 //////////////////////////////////////////////////////////////////////
-
 
 function livereload() {
   wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', array(), null, true);
@@ -114,76 +82,3 @@ if( isset( $_SERVER['HTTP_HOST'] ) ) {
       add_action('wp_enqueue_scripts', 'livereload');
   }
 }
-
-
-
-
-
-
-
-//
-//		Remove meta boxes from post & pages. Uncomment if you want
-//    cleaner post and pages(like the attributes, tags and category)
-//
-//////////////////////////////////////////////////////////////////////
-
-
-
-// function remove_meta_boxes() {
-// 	remove_meta_box( 'pageparentdiv' , 'page', 'normal'); // Removes attributes page
-// 	remove_meta_box( 'tagsdiv-post_tag', 'post', 'normal'); // Removes tags for post
-// 	remove_meta_box( 'categorydiv', 'post', 'normal'); // Removes category for posts
-// }
-// add_action('admin_menu', 'remove_meta_boxes');
-
-
-
-
-
-
-
-
-
-
-//
-//		Removes comments menu
-//
-//////////////////////////////////////////////////////////////////////
-
-
-// function remove_menus(){
-//   remove_menu_page( 'edit-comments.php' );
-// }
-// add_action( 'admin_menu', 'remove_menus' );
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//		Removes Types (custom post type generator) marketing
-//
-//////////////////////////////////////////////////////////////////////
-
-
-// function adminstyle() {
-//    echo '<style type="text/css">
-//            #wpcf-marketing { display: none;}
-//          </style>';
-// }
-// add_action('admin_head', 'adminstyle');
-
-
-
-
-
-
-
