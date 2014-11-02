@@ -151,7 +151,7 @@ function get_embedly_metadata( $post_id, $url ) {
   $oembed = get_object_vars( $response );
 
   foreach ( $oembed as $key => $value ) {
-    update_post_meta( $post_id, '_format_link_' . $key, $value );
+    update_post_meta( $post_id, '_url_embedly_' . $key, $value );
   }
 }
 // action added in cfpf_admin_init()
@@ -196,6 +196,9 @@ function cfpf_format_quote_save_post($post_id, $post) {
     foreach ($keys as $key) {
       if (isset($_POST[$key])) {
         update_post_meta($post_id, $key, $_POST[$key]);
+        if ( $key === '_format_quote_source_url' ) {
+          get_embedly_metadata( $post_id, $_POST['_format_quote_source_url'] );
+        }
       }
     }
   }
@@ -208,6 +211,7 @@ function cfpf_format_quote_save_post($post_id, $post) {
 function cfpf_format_video_save_post($post_id) {
   if (!defined('XMLRPC_REQUEST') && isset($_POST['_format_video_embed'])) {
     update_post_meta($post_id, '_format_video_embed', $_POST['_format_video_embed']);
+    get_embedly_metadata( $post_id, $_POST['_format_video_embed'] );
   }
 }
 // action added in cfpf_admin_init()
@@ -215,6 +219,7 @@ function cfpf_format_video_save_post($post_id) {
 function cfpf_format_audio_save_post($post_id) {
   if (!defined('XMLRPC_REQUEST') && isset($_POST['_format_audio_embed'])) {
     update_post_meta($post_id, '_format_audio_embed', $_POST['_format_audio_embed']);
+    get_embedly_metadata( $post_id, $_POST['_format_audio_embed'] );
   }
 }
 // action added in cfpf_admin_init()
