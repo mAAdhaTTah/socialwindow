@@ -180,10 +180,19 @@
 		$('.broadcast-interstitial .broadcast-edit textarea').on('keyup change click focus', function() {
 			$counter = $(this).closest('.broadcast-edit').find('.counter');
 			var diff = parseInt($(this).attr('maxlength')) - parseInt($(this).val().length),
-				diffClass = '';
+				diffClass = '',
+				newLines = $(this).val().match(/(\r\n|\n|\r)/g),
+				addition = 0;
+
+			if (newLines != null) {
+				addition = newLines.length;
+			}
+			diff -= addition;
+
 			if (diff < 10) {
 				diffClass = 'maxlength-remaining-short';
 			}
+
 			$counter.removeClass('maxlength-remaining-short').addClass(diffClass).html(diff);
 
 			if (diff <= 1) {
