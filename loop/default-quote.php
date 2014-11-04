@@ -19,7 +19,7 @@
   <blockquote>
     <?php the_content(); ?>
     <cite>
-      <a href="<?php echo get_post_meta( get_the_ID(), '_format_quote_source_url', true ); ?>">
+      <a href="<?php echo get_post_meta( get_the_ID(), '_format_quote_source_url', true ); ?>" target="_blank">
         <?php echo get_post_meta( get_the_ID(), '_format_quote_source_name', true ); ?>
       </a>
     </cite>
