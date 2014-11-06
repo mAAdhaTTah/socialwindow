@@ -51,15 +51,9 @@ final class Social_Controller_Auth extends Social_Controller {
 				setcookie('social_auth_nonce', $id, 0, '/');
 			}
 
-//Social::log('SETTING ID GET: :get', array(
-//	'get' => print_r($_GET, true)
-//));
-
 			$proxy = add_query_arg(array(
 				'v' => '2',
 				'id' => $id,
-'is_admin' => 'true',
-'user_id' => get_current_user_id(),
 				'response_url' => urlencode(add_query_arg($args, $url))
 			), $proxy);
 
@@ -83,14 +77,6 @@ final class Social_Controller_Auth extends Social_Controller {
 		if ($user_id !== null) {
 			wp_set_current_user($user_id);
 		}
-
-Social::log('GET: :get', array(
-	'get' => print_r($_GET, true)
-));
-
-Social::log('POST: :post', array(
-	'post' => print_r($_POST, true)
-));
 
 		$nonce = stripslashes($this->request->post('id'));
 		$salt = stripslashes($this->request->query('salt'));

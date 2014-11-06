@@ -288,10 +288,8 @@ Much to the consternation of developers everywhere, Twitter provides direct CDN 
 
 = 3.0 =
 * (fix) Change specific nonce behavior for WordPress 4.0 compatibility.
+* (fix) Add additional nonce behavior to account for nonces added to URLs.
 * Sync up `child_account_avatar()` declarations
-
-= 2.12 =
-* (fix) Change specific nonces behavior for WordPress 4.0 compatibility.
 
 = 2.11 =
 * (new) FAQ with link to plugin to update Twitter avatars for comments
@@ -311,6 +309,7 @@ Much to the consternation of developers everywhere, Twitter provides direct CDN 
 
 = 3.0 =
 * (fix) Change specific nonce behavior for WordPress 4.0 compatibility.
+* (fix) Add additional nonce behavior to account for nonces added to URLs.
 * Sync up `child_account_avatar()` declarations
 * (fix) Pull up to 500 comments from Facebook (thanks Andrew Ferguson)
 * (fix) Correct wp-cron call to wp-admin/options-general.php

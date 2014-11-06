@@ -1,11 +1,12 @@
 # Social #
-**Contributors:** crowdfavorite, alexkingorg  
-**Tags:** comments, facebook, twitter, social, broadcast, import, integrate, integration  
-**Requires at least:** 3.8  
-**Tested up to:** 4.0  
-**Stable tag:** 3.0  
-**License:** GPLv2  
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
+**Contributors:** crowdfavorite, alexkingorg
+**Tags:** comments, facebook, twitter, social, broadcast, import, integrate, integration
+**Requires at least:** 3.8
+**Tested up to:** 4.0
+**Stable tag:** 3.0
+**License:** GPLv2
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
+ 
 
 Broadcast posts to Twitter and/or Facebook, pull in reactions from each (replies, retweets, comments, "likes") as comments, and allow commenters to log in with their Twitter/Facebook identities.
 
@@ -273,32 +274,27 @@ Much to the consternation of developers everywhere, Twitter provides direct CDN 
 
 ## Screenshots ##
 
-###1. Allow your visitors to leave a comment as their Facebook or Twitter identities
-###
+###1. Allow your visitors to leave a comment as their Facebook or Twitter identities###
 ![Allow your visitors to leave a comment as their Facebook or Twitter identities
 ](https://s.w.org/plugins/social/screenshot-1.png)
 
 
-###2. Social settings screen to connect accounts, set up default broadcast settings and more
-###
+###2. Social settings screen to connect accounts, set up default broadcast settings and more###
 ![Social settings screen to connect accounts, set up default broadcast settings and more
 ](https://s.w.org/plugins/social/screenshot-2.png)
 
 
-###3. Post edit screen settings: broadcast the post, manually import comments, view a log of imported items
-###
+###3. Post edit screen settings: broadcast the post, manually import comments, view a log of imported items###
 ![Post edit screen settings: broadcast the post, manually import comments, view a log of imported items
 ](https://s.w.org/plugins/social/screenshot-3.png)
 
 
-###4. Send customized broadcasts to each social account
-###
+###4. Send customized broadcasts to each social account###
 ![Send customized broadcasts to each social account
 ](https://s.w.org/plugins/social/screenshot-4.png)
 
 
-###5. View of replies imported from Twitter as comments
-###
+###5. View of replies imported from Twitter as comments###
 [missing image]
 
 
@@ -307,6 +303,7 @@ Much to the consternation of developers everywhere, Twitter provides direct CDN 
 
 ### 3.0 ###
 * (fix) Change specific nonce behavior for WordPress 4.0 compatibility.
+* (fix) Add additional nonce behavior to account for nonces added to URLs.
 * Sync up `child_account_avatar()` declarations
 
 ### 2.11 ###
@@ -327,8 +324,12 @@ Much to the consternation of developers everywhere, Twitter provides direct CDN 
 
 ### 3.0 ###
 * (fix) Change specific nonce behavior for WordPress 4.0 compatibility.
+* (fix) Add additional nonce behavior to account for nonces added to URLs.
 * Sync up `child_account_avatar()` declarations
 * (fix) Pull up to 500 comments from Facebook (thanks Andrew Ferguson)
+* (fix) Correct wp-cron call to wp-admin/options-general.php
+* (fix) Increase Facebook max_broadcast_length to 50,000 (from 420)
+* (fix) Modify character counter to count linefeeds as two characters as required by HTML specification: http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4
 
 ### 2.11 ###
 * (new) FAQ with link to plugin to update Twitter avatars for comments
@@ -449,3 +450,4 @@ Much to the consternation of developers everywhere, Twitter provides direct CDN 
 
 ### 1.0 ###
 * Initial release
+
