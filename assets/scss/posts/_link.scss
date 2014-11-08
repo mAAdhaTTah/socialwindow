@@ -5,27 +5,21 @@
     margin: -30px;
     padding: 30px;
     background-color: $accent-light;
-    @include side-radius(top);
+    border-radius: $global-radius;
 
     p {
-      margin-bottom: 30px;
       color: $font-color-dark;
     }
   }
 
   .link-meta {
     @include grid-row($behavior: nest-collapse);
-    margin: -30px -30px;
-    padding: 30px 30px 20px;
+    margin: -10px -10px 20px;
+    padding: 10px;
+    border-radius: 5px;
     background-color: $accent-dark;
     color: $secondary-color;
-    @include side-radius(bottom);
-
-    @media #{$small-only} {
-      margin: -20px -30px -30px;;
-      padding: 20px 30px 20px;
-    }
-
+    border-radius: $small-radius;
   }
 
   .link-title {
@@ -42,7 +36,7 @@
 
   .link-provider {
     font-size: rem-calc($rem-base * 0.6);
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 
     a {
       text-transform: uppercase;
@@ -62,11 +56,15 @@
     );
   }
 
-  .entry-meta a {
-    color: $font-color-dark;
+  .entry-meta {
+    margin-bottom: 0;
 
-    &:hover {
-      color: $primary-color;
+    a {
+      color: $font-color-dark;
+
+      &:hover {
+        color: $primary-color;
+      }
     }
   }
 
