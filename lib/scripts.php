@@ -21,6 +21,7 @@ function roots_scripts() {
   if (is_single() && comments_open() && get_option('thread_comments')) {wp_enqueue_script('comment-reply'); }
 
   wp_dequeue_style( 'social_comments' );
+  wp_dequeue_script( 'jquery' );
 
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/modernizr.min.js', array(), false, false);
   wp_enqueue_script('modernizr');
