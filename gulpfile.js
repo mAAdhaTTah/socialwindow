@@ -133,9 +133,13 @@ var zip = require('gulp-zip');                     // Zip up dist
 gulp.task('watch', function(){
   var server = livereload();
   gulp.watch('**/*.php').on('change', function(file) {
-        server.changed(file.path);
-        util.log(util.colors.yellow('PHP file changed' + ' (' + file.path + ')'));
-    });
+    var parts = file.path.split('/');
+    var name = parts[parts.length - 1];
+
+    server.changed(file.path);
+    gulp.src(file.path)
+      .pipe(notify('PHP file changed' + ' (' + name + ')'));
+  });
 
   gulp.watch("bower_components/foundation/scss/**/*.scss", ['sass']); // Runs sass on foundation components change
   gulp.watch("assets/scss/**/*.scss", ['sass']);                      // Watch and run sass on changes
