@@ -31,12 +31,6 @@ function sw_thread_notice( $notice_html, $post ) {
 }
 add_filter('cfth_thread_notice', 'sw_thread_notice', 10, 2);
 
-/**
- * Custom functions, all this is optional
- * Mosly cleaning up the admin interface.
- * Comment out what you don't need, and uncomment what you want.
- */
-
 //
 //		Fixes overlapping adminbar for Foundations top-bar
 //
