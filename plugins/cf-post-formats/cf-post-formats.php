@@ -140,7 +140,7 @@ function get_embedly_metadata( $post_id, $url = '' ) {
     return;
   }
 
-  $api_key = get_option( '_embedly_api_key', $default );
+  $api_key = get_option( '_embedly_api_key' );
 
   if ( empty($api_key) ) {
     return;
@@ -151,7 +151,13 @@ function get_embedly_metadata( $post_id, $url = '' ) {
   ) );
 
   $response = $api->oembed( $url );
-  // @todo check if error object
+
+  if ( is_int( $response ) ) {
+    // Means we're getting an error
+    return;
+  }
+
+  update_post_meta( $post_id, '_url_embedly_retrieved', true );
 
   // Turns the response object into an array
   $oembed = get_object_vars( $response );
