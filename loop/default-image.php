@@ -1,4 +1,7 @@
-<div class="entry-content">
+<header>
+  <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+</header>
+<div class="entry-image">
   <?php $thumb_small = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'image-main-small' ); ?>
   <?php $thumb_medup = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'image-main-medup' ); ?>
   <?php $full = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
@@ -11,8 +14,7 @@
     </li>
   </ul>
 </div>
-<footer>
-  <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-  <?php the_content(); ?>
+<div class="entry-content">
   <?php get_template_part('partials/entry-meta'); ?>
-</footer>
+  <?php the_content(); ?>
+</div>

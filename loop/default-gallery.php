@@ -1,7 +1,6 @@
 <header>
-  <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+  <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 </header>
-
 <ul class="gallery-wrap">
   <?php
     $attachments = get_posts(array(
@@ -33,8 +32,7 @@
     </a>
   </li>
 </ul>
-
+<?php get_template_part('partials/entry-meta'); ?>
 <div class="entry-content">
-  <?php get_template_part('partials/entry-meta'); ?>
   <?php the_content(); ?>
 </div>

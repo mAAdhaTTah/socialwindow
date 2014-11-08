@@ -1,15 +1,14 @@
 .format-quote {
-
+  margin: 0 -30px 20px;
+  padding: 30px;
+  background-color: $accent-dark;
+  border-radius: $global-radius;
 
   .entry-content {
-    background-color: $accent-dark;
-    border-radius: $global-radius;
-    margin: -30px -30px 30px;
-    padding: 30px;
 
     blockquote {
       * {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         color: $font-color-light;
       }
 
@@ -24,7 +23,7 @@
     }
   }
 
-  .single & {
+  .entry-meta {
     margin-bottom: 0;
   }
 }

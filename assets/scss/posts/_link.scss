@@ -1,42 +1,44 @@
 .format-link {
-  margin-bottom: 70px;
+  margin: 0 -30px 20px;
+  padding: 25px 30px 10px;
+  background-color: $accent-light;
 
   .entry-content {
-    margin: -30px;
-    padding: 30px;
-    background-color: $accent-light;
     border-radius: $global-radius;
 
-    p {
-      color: $font-color-dark;
+    a {
+      color: darken( $secondary-color, 10% );
+
+      &:hover {
+        color: darken( $secondary-color, 30% );
+      }
     }
   }
 
   .link-meta {
-    @include grid-row($behavior: nest-collapse);
-    margin: -10px -10px 20px;
+    margin: 0 -10px 10px;
     padding: 10px;
     border-radius: 5px;
     background-color: $accent-dark;
     color: $secondary-color;
     border-radius: $small-radius;
+
+    a {
+      color: darken( $secondary-color, 10% );
+
+      &:hover {
+        color: darken( $secondary-color, 30% );
+      }
+    }
   }
 
   .link-title {
     font-size: rem-calc($rem-base * 1.1);
   }
 
-  a {
-    color: darken( $secondary-color, 10% );
-
-    &:hover {
-      color: darken( $secondary-color, 30% );
-    }
-  }
-
   .link-provider {
     font-size: rem-calc($rem-base * 0.6);
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
 
     a {
       text-transform: uppercase;
@@ -44,44 +46,9 @@
   }
 
   .link-info {
-    @include grid-column(
-      // Control the number of columns
-      $columns: 12,
-      // Specify whether or not this is the last column in the row
-      $last-column: true,
-      // Set to true to remove column padding
-      $collapse: false,
-      // Specify the float direction
-      $float: right
-    );
-  }
-
-  .entry-meta {
-    margin-bottom: 0;
-
-    a {
-      color: $font-color-dark;
-
-      &:hover {
-        color: $primary-color;
-      }
-    }
-  }
-
-  p.threads-post-notice {
-    background-color: darken( $accent-dark, 5% );
-    color: $font-color-light;
-    font-size: 90%;
-    margin: -10px -10px 20px;
-    padding: 10px;
-    border-radius: 5px;
   }
 
   code {
     color: darken( $primary-color, 10% );
-  }
-
-  .single & {
-    margin-bottom: 50px;
   }
 }

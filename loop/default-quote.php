@@ -14,6 +14,7 @@
     }
     $notice_html = "\n\n".'<p class="threads-post-notice">'.$notice.'</p>';
   }
+  echo $notice_html;
 ?>
 <div class="entry-content">
   <blockquote>
@@ -24,6 +25,5 @@
       </a>
     </cite>
   </blockquote>
-  <?php echo $notice_html; ?>
-  <?php get_template_part('partials/entry-meta'); ?>
 </div>
+<?php get_template_part('partials/entry-meta'); ?>

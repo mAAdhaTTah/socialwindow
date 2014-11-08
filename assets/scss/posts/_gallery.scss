@@ -1,11 +1,7 @@
 .format-gallery {
-  margin: -30px -20px 50px;
-  padding: 30px;
+  margin: 0 -30px 20px;
+  padding: 10px 30px 5px;
   background-color: darken( $secondary-color, 7% );
-
-  a {
-    color: $accent-dark;
-  }
 
   .gallery-wrap {
     @include block-grid(
@@ -51,10 +47,5 @@
   }
 
   .entry-content {
-    padding: 10px;
-  }
-
-  .single & {
-    margin-bottom: 20px;
   }
 }
