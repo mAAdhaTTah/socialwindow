@@ -23,3 +23,4 @@
     </a>
   </div>
 <?php endif;?>
+<?php the_thread_notice(); ?>

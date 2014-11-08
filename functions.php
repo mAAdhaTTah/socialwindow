@@ -19,6 +19,7 @@ $roots_includes = array(
   'lib/pagination.php',             // Custom pagination
   'lib/scripts.php',                // Scripts and stylesheets
   'lib/extras.php',                 // Custom functions
+  'lib/template.php',               // Custom functions
   'plugins/load.php',               // Load plugins
 );
 

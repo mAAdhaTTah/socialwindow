@@ -36,3 +36,4 @@
 <div class="entry-content">
   <?php the_content(); ?>
 </div>
+<?php the_thread_notice(); ?>

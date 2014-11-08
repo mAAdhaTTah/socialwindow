@@ -18,3 +18,4 @@
   <?php get_template_part('partials/entry-meta'); ?>
   <?php the_content(); ?>
 </div>
+<?php the_thread_notice(); ?>

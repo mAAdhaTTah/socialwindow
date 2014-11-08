@@ -21,15 +21,7 @@ function roots_wp_title($title) {
 }
 add_filter('wp_title', 'roots_wp_title', 10);
 
-function sw_thread_notice( $notice_html, $post ) {
-
-  if ( 'quote' === get_post_format( $post->ID ) ) {
-    return '';
-  }
-
-  return $notice_html;
-}
-add_filter('cfth_thread_notice', 'sw_thread_notice', 10, 2);
+remove_filter('the_posts', 'cfth_thread_notice', 10, 2);
 
 //
 //		Fixes overlapping adminbar for Foundations top-bar

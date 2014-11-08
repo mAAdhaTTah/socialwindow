@@ -15,3 +15,4 @@
   </div>
 </div>
 <?php get_template_part('partials/entry-meta'); ?>
+<?php the_thread_notice(); ?>
