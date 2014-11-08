@@ -32,7 +32,7 @@
       border-radius: $small-radius;
       float: right;
       font-size: 24px;
-      @include fa-content("\f178", after)
+      @include fa-content("\f178", after);
     }
   }
 }
