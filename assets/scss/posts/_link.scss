@@ -33,7 +33,7 @@
   }
 
   a {
-    color: $primary-color;
+    color: darken( $secondary-color, 10% );
 
     &:hover {
       color: darken( $secondary-color, 30% );

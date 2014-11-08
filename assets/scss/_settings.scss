@@ -43,7 +43,7 @@ $secondary-color: #DBD1AD;
 $accent-dark: #24331E;
 $accent-light: #78af52;
 $font-color-dark: #000;
-$font-color-light: #FFF;
+$font-color-light: $primary-color;
 
 // We use these to control various global styles
 $body-bg: $primary-color;
