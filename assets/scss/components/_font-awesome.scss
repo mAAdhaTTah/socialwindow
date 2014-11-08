@@ -64,14 +64,26 @@
     @include fa-content($content);
 }
 
-@mixin fa-content($content) {
+@mixin fa-content($content, $where: before) {
+  @if $where == after {
+    &:after {
+      content: $content;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+      padding-right: 10px;
+      font-size: 110%;
+    }
+  } @else {
     &:before {
-    content: $content;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    padding-right: 10px;
-    font-size: 110%;
+      content: $content;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+      padding-right: 10px;
+      font-size: 110%;
+    }
   }
 }

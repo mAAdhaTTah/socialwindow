@@ -2,17 +2,16 @@
   margin-bottom: 20px;
   border-radius: $global-radius;
 
-  h1 {
-
-  }
-
-  header { }
-
-  .entry-content { }
-
   .entry-title {
     margin-bottom: 10px;
   }
+
+  .entry-thumbnail {
+    float: left;
+    margin: 0 20px 10px 0;
+  }
+
+  .entry-content { }
 
   p.threads-post-notice {
     background-color: darken( $accent-dark, 5% );
@@ -23,8 +22,17 @@
     border-radius: 5px;
   }
 
-  .entry-thumbnail {
-    float: left;
-    margin: 0 20px 10px 0;
+  .comments-link {
+    @include clearfix;
+
+    a {
+      background-color: $secondary-color;
+      margin: 0 -10px;
+      padding: 10px;
+      border-radius: $small-radius;
+      float: right;
+      font-size: 24px;
+      @include fa-content("\f178", after)
+    }
   }
 }

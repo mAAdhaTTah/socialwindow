@@ -16,3 +16,10 @@
   <?php endif; ?>
   <?php the_content(); ?>
 </div>
+<?php if ( ! is_single() ) : ?>
+  <div class="comments-link">
+    <a href="<?php comments_link(); ?>">
+      <?php comments_number( 'Add a comment', 'View 1 comment', 'View % comments' ); ?>.
+    </a>
+  </div>
+<?php endif;?>
