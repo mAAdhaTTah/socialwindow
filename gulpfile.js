@@ -79,7 +79,19 @@ var zip = require('gulp-zip');                     // Zip up dist
   gulp.task('jshint', function() {
     return gulp.src('assets/js/_*.js')
       .pipe(jshint())
-      .pipe(jshint.reporter('jshint-stylish'));
+      .pipe(notify(function (file) {
+        if (file.jshint.success) {
+          // Don't show something if success
+          return false;
+        }
+
+        var errors = file.jshint.results.map(function (data) {
+          if (data.error) {
+            return "(" + data.error.line + ':' + data.error.character + ') ' + data.error.reason;
+          }
+        }).join("\n");
+        return file.relative + " (" + file.jshint.results.length + " errors)\n" + errors;
+      }));
   });
 
 //
@@ -144,7 +156,7 @@ gulp.task('watch', function(){
 
   gulp.watch("bower_components/foundation/scss/**/*.scss", ['sass']); // Runs sass on foundation components change
   gulp.watch("assets/scss/**/*.scss", ['sass']);                      // Watch and run sass on changes
-  gulp.watch("assets/js/_*.js", ['jshint', 'javascripts']);           // Watch and run javascripts on changes
+  gulp.watch(["assets/js/_*.js", "assets/js/plugins/*.js"], ['jshint', 'javascripts']);           // Watch and run javascripts on changes
   gulp.watch("assets/img/*", ['imagemin', 'svgmin']);                 // Watch and minify images on changes
 
 });
