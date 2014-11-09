@@ -22,6 +22,8 @@
     background-color: $accent-dark;
     color: $secondary-color;
     border-radius: $small-radius;
+    font-family: 'Source Code Pro';
+    font-size: 90%;
 
     a {
       color: darken( $secondary-color, 10% );
@@ -33,6 +35,8 @@
   }
 
   .link-title {
+    font-family: 'Ubuntu';
+    margin-bottom: 2px;
     font-size: rem-calc($rem-base * 1.1);
   }
 

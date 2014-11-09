@@ -10,7 +10,7 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function roots_scripts() {
-  wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Unica+One|Vollkorn:400italic,700italic,400,700', false);
+  wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Unica+One|Vollkorn:400italic,700italic,400,700|Source+Code+Pro:400,700|Ubuntu:400,700', false);
   wp_enqueue_style( 'googleFonts');
 
   wp_register_style('fontAwesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', false);
