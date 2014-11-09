@@ -25,21 +25,7 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on all pages
       $(document).foundation(); // Initialize foundation JS for all pages
-    }
-  },
-  // Home page
-  home: {
-    init: function() {
-      // JavaScript to be fired on the home page
-    }
-  },
-  // Single post pages
-  single: {
-    init: function() {
-      // JavaScript to be fired on the about us page
-      $('a.comment-reply-link').click(function(e){
-        e.preventDefault();
-      });
+      Footnotes.initTooltip();
     }
   }
 };

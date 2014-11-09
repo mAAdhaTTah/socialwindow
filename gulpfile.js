@@ -40,7 +40,7 @@ var zip = require('gulp-zip');                     // Zip up dist
     return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',     // Gets Jquery
       'bower_components/fastclick/lib/fastclick.js',      // Gets fastclick
-      // Gets Foundation JS change to only include the scripts you'll need
+      // Gets Foundation JS
       'bower_components/foundation/js/foundation/foundation.js',
       'bower_components/foundation/js/foundation/foundation.abide.js',
       'bower_components/foundation/js/foundation/foundation.alert.js',
@@ -50,6 +50,7 @@ var zip = require('gulp-zip');                     // Zip up dist
       'bower_components/foundation/js/foundation/foundation.tooltip.js',
       'bower_components/foundation/js/foundation/foundation.topbar.js',
       // moving on...
+      'assets/js/plugins/*.js',                                           // Gets all the user plugins
       'assets/js/_*.js'])                                                 // Gets all the user JS _*.js from assets/js
       .pipe(concat('scripts.js'))                                         // Concat all the scripts
       .pipe(rename({suffix: '.min'}))                                     // Rename it
