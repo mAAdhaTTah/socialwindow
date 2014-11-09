@@ -53,9 +53,14 @@
   }
 
   #title {
+
     h1 {
       margin-bottom: 0;
       font-size: $h1-font-size * 1.25;
+
+      a {
+        color: $font-color-dark;
+      }
     }
   }
 

@@ -2,11 +2,11 @@
 
   <section class="banner contain-to-grid">
     <div id="logo" class="columns">
-      <div class="container"></div>
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><div class="container"></div></a>
     </div>
     <div id="blog-info" class="columns">
       <div id="title">
-        <h1>James DiGioia</h1>
+        <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a></h1>
       </div>
 
       <div id="social-links">
@@ -40,7 +40,7 @@
       </div>
 
       <div id="subtitle">
-        <h2 class="subheader">Social Media and Web Development</h2>
+        <h2 class="subheader"><?php bloginfo('description'); ?></h2>
       </div>
     </div>
   </section>
