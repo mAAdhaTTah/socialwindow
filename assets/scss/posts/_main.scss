@@ -15,6 +15,7 @@
 
   .comments-link {
     @include clearfix;
+    margin-bottom: 10px;
 
     a {
       background-color: $secondary-color;
