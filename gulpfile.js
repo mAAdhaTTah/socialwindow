@@ -38,7 +38,6 @@ var zip = require('gulp-zip');                     // Zip up dist
 //////////////////////////////////////////////////////////////////////
   gulp.task('javascripts', function(){
     return gulp.src([
-      'bower_components/jquery/dist/jquery.min.js',     // Gets Jquery
       'bower_components/fastclick/lib/fastclick.js',      // Gets fastclick
       // Gets Foundation JS
       'bower_components/foundation/js/foundation/foundation.js',
@@ -64,14 +63,21 @@ var zip = require('gulp-zip');                     // Zip up dist
 //    Copy bower components to assets-folder
 //
 //////////////////////////////////////////////////////////////////////
-  gulp.task('copy', function(){
+  gulp.task('copy',['copy-modernizr', 'copy-jquery']);
+
+  gulp.task('copy-modernizr', function(){
     return gulp.src('bower_components/modernizr/modernizr.js')   // Gets Modernizr.js
     .pipe(uglify())                                       // Uglify(minify)
     .pipe(rename({suffix: '.min'}))                       // Rename it
     .pipe(gulp.dest('assets/js/'))                        // Set destination to assets/js
-    .pipe(notify('Files copied'));                        // Output to notification
+    .pipe(notify('Modernizr copied'));                        // Output to notification
   });
 
+  gulp.task('copy-jquery', function(){
+    return gulp.src('bower_components/jquery/dist/jquery.min.js')     // Gets Jquery
+    .pipe(gulp.dest('assets/js/'))                        // Set destination to assets/js
+    .pipe(notify('jQuery copied'));                        // Output to notification
+  });
 //
 //    JS hint
 //
@@ -117,8 +123,6 @@ var zip = require('gulp-zip');                     // Zip up dist
 //
 //////////////////////////////////////////////////////////////////////
   gulp.task('zip',['sass', 'jshint', 'javascripts', 'copy'], function() {
-    var server = livereload.listen();
-
     return gulp.src([
       '!**/.*',
       '!**/*.md',
