@@ -25,7 +25,10 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on all pages
       $(document).foundation(); // Initialize foundation JS for all pages
-      Footnotes.initTooltip();
+      $.bigfoot({
+        numberResetSelector: "article"
+      });
+
     }
   }
 };
