@@ -1,3 +1,7 @@
+### 0.2.1: Nov 17th, 2014
+* Switch footnotes tooltip js to [Bigfoot.js](http://www.bigfootjs.com/)
+* Fix jQuery double-loading
+
 ### 0.2.0: Nov 9th, 2014
 * Improve link post styling
 * Major spacing cleanup/improvement
