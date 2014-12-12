@@ -31,7 +31,7 @@
         <a href="https://github.com/mAAdhaTTah/" target="_blank">
           <i class="fa fa-github-square"></i>
         </a>
-        <a href="www.reddit.com/user/maadhattah" target="_blank">
+        <a href="https://www.reddit.com/user/maadhattah" target="_blank">
           <i class="fa fa-reddit-square"></i>
         </a>
         <a href="http://stackexchange.com/users/3267217/maadhattah" target="_blank">
