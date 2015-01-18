@@ -27,11 +27,29 @@ Install the [Soil](https://github.com/roots/soil) plugin to enable additional fe
 
 ## Installation
 
+### Via the WordPress Dashbaord
+
 1. Download the bundled `.zip` from the [releases](https://github.com/mAAdhaTTah/socialwindow/releases) page.
 2. Upload the `.zip` at Appearance -> Themes -> Add New -> Upload Theme.
 3. Activate the theme.
 4. ???
 5. Profit!
+
+### Via Composer
+
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/maadhattah/socialwindow",
+    }
+  ],
+  "require": {
+    "maadhattah/socialwindow": "0.3.0",
+  }
+}
+```
 
 ## Credits
 

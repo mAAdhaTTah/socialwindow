@@ -122,7 +122,9 @@ var zip = require('gulp-zip');                     // Zip up dist
 //    Builds the theme into a .zip
 //
 //////////////////////////////////////////////////////////////////////
-  gulp.task('zip',['sass', 'jshint', 'javascripts', 'copy'], function() {
+  gulp.task('prebuild',['sass', 'jshint', 'javascripts', 'copy', 'imagemin', 'svgmin']);
+
+  gulp.task('zip', ['prebuild'], function() {
     return gulp.src([
       '!**/.*',
       '!**/*.md',
@@ -140,6 +142,10 @@ var zip = require('gulp-zip');                     // Zip up dist
   });
 
   gulp.task('build',['zip'], function() {
+      process.exit(0);
+  });
+
+  gulp.task('deploy', ['prebuild'], function() {
       process.exit(0);
   });
 

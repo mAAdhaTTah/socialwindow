@@ -1,0 +1,19 @@
+{
+  "name": "maadhattah/socialwindow",
+  "description": "Social tumblog theme for SocialDen",
+  "license": "MIT",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "mAAdhaTTah",
+      "email": "jamesorodig@gmail.com"
+    }
+  ],
+  "scripts": {
+    "post-install-cmd": "npm install && bower install && gulp deploy"
+  },
+  "minimum-stability": "stable",
+  "require" : {
+    "composer/installers": "v1.0.12"
+  }
+}
