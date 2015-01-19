@@ -1,6 +1,13 @@
-<header>
+<header id="splash"
+  data-stellar-background-ratio=".5"
+  data-interchange="
+    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header.jpg, (large)],
+    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header.jpg, (medium)],
+    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header.jpg, (small)],
+    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header.jpg, (default)]
+">
 
-  <section class="banner contain-to-grid">
+  <section class="banner">
     <div id="logo" class="columns">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><div class="container"></div></a>
     </div>

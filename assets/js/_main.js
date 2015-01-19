@@ -28,9 +28,14 @@ var Roots = {
       $.bigfoot({
         numberResetSelector: "article"
       });
-
     }
-  }
+  },
+  // Home page
+  home: {
+    init: function() {
+      swSplash.init();
+    }
+  },
 };
 
 // The routing fires all common scripts, followed by the page specific scripts.

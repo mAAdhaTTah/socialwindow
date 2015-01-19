@@ -1,0 +1,15 @@
+.home #splash {
+  .nav-container {
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+  }
+
+  .banner {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
