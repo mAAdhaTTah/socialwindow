@@ -22,8 +22,10 @@
     background-color: $accent-dark;
     color: $secondary-color;
     border-radius: $small-radius;
-    font-family: 'Source Code Pro';
-    font-size: 90%;
+
+    p, h6, small {
+      font-family: 'Source Code Pro';
+    }
 
     a {
       color: darken( $secondary-color, 10% );
@@ -35,7 +37,6 @@
   }
 
   .link-title {
-    font-family: 'Ubuntu';
     margin-bottom: 2px;
     font-size: rem-calc($rem-base * 1.1);
   }
@@ -49,7 +50,8 @@
     }
   }
 
-  .link-info {
+  .link-description {
+    //line-height: 1.25em;
   }
 
   code {

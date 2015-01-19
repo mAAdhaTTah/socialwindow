@@ -3,9 +3,9 @@
 </div>
 <div class="link-meta">
   <div class="link-info">
-    <h4 class="link-title"><a href="<?php echo get_post_meta( get_the_ID(), '_format_link_url', true ); ?>" target="_blank">
+    <h6 class="link-title"><a href="<?php echo get_post_meta( get_the_ID(), '_format_link_url', true ); ?>" target="_blank">
       <i class="fa fa-link"></i> <?php the_title(); ?>
-    </a></h4>
+    </a></h6>
     <?php if ( get_post_meta( get_the_ID(), '_url_embedly_retrieved' ) ) : ?>
       <p class="link-provider">
         Source: <a href="<?php echo get_post_meta( get_the_ID(), '_url_embedly_provider_url', true ); ?>" target="_blank"><?php echo get_post_meta( get_the_ID(), '_url_embedly_provider_name', true ); ?></a>
