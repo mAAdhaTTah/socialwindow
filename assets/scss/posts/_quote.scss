@@ -1,6 +1,5 @@
 .format-quote {
-  margin: 0 -30px 20px;
-  padding: 30px;
+  padding: rem-calc(30);
   background-color: $accent-dark;
   border-radius: $global-radius;
 

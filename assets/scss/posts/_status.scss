@@ -1,6 +1,5 @@
 .format-status {
-  margin: 0 -30px 20px;
-  padding: 30px 30px 10px;
+  padding: rem-calc(30 30 10);
   background-color: darken( $secondary-color, 20% );
 
   .entry-content {

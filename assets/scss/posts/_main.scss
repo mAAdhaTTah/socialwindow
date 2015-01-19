@@ -1,6 +1,12 @@
 .hentry {
-  margin-bottom: 20px;
+  margin: rem-calc(0 -30 20);
+  padding: rem-calc(10 30 5);
   border-radius: $global-radius;
+
+  @media #{$small-only} {
+    margin: rem-calc(0 0 10);
+    padding: rem-calc(0 -10);
+  }
 
   .entry-title {
     margin-bottom: 10px;
@@ -8,7 +14,7 @@
 
   .entry-thumbnail {
     float: left;
-    margin: 0 20px 10px 0;
+    margin: rem-calc(0 20 10 0);
   }
 
   .entry-content { }

@@ -1,7 +1,11 @@
 .format-link {
-  margin: 0 -30px 20px;
-  padding: 25px 30px 10px;
+  padding: rem-calc(25 30 10);
   background-color: $accent-light;
+
+  @media #{$small-only} {
+    margin: rem-calc(0 0 10);
+    padding: rem-calc(0 -10);
+  }
 
   .entry-content {
     border-radius: $global-radius;
@@ -16,8 +20,8 @@
   }
 
   .link-meta {
-    margin: 0 -10px 10px;
-    padding: 10px;
+    margin: rem-calc(0 -10 10);
+    padding: rem-calc(10);
     border-radius: 5px;
     background-color: $accent-dark;
     color: $secondary-color;
@@ -51,7 +55,7 @@
   }
 
   .link-description {
-    //line-height: 1.25em;
+    line-height: 1.25em;
   }
 
   code {
