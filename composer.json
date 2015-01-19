@@ -3,7 +3,7 @@
   "description": "Social tumblog theme for SocialDen",
   "license": "MIT",
   "version": "0.3.0",
-  "type": "wordpress-plugin",
+  "type": "wordpress-theme",
   "authors": [
     {
       "name": "mAAdhaTTah",
