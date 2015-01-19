@@ -17,3 +17,13 @@ function the_thread_notice() {
   echo $notice_html;
 }
 
+function sw_body_classes($classes) {
+  if ( in_array('paged', $classes) ) {
+    if(($key = array_search('home', $classes)) !== false) {
+        unset($classes[$key]);
+    }
+  }
+  return $classes;
+}
+
+add_filter('body_class', 'sw_body_classes');
