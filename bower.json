@@ -21,7 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "foundation": "5.3.0",
-    "jquery.stellar": "~0.6.2"
+    "foundation": "5.3.3",
+    "jquery.stellar": "0.6.2"
   }
 }
