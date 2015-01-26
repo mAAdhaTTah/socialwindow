@@ -1,10 +1,10 @@
 <header id="splash"
   data-stellar-background-ratio=".5"
   data-interchange="
-    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header-large.jpg, (large-only)],
-    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header-medium.jpg, (medium-only)],
-    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header-small.jpg, (small-only)],
-    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header.jpg, (default)]
+    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header.jpg, (default)],
+    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header-small.jpg, (small)],
+    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header-medium.jpg, (medium)],
+    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header-large.jpg, (large)]
 ">
 
   <section class="banner">
