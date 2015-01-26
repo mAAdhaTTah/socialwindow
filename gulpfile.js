@@ -40,6 +40,7 @@ var zip = require('gulp-zip');                     // Zip up dist
     return gulp.src([
       'bower_components/fastclick/lib/fastclick.js',      // Gets fastclick
       'bower_components/jquery.stellar/jquery.stellar.min.js',      // Gets jQuery stellar
+      'bower_components/modernizr/modernizr.js',   // Get Modernizer
       // Gets Foundation JS
       'bower_components/foundation/js/foundation/foundation.js',
       'bower_components/foundation/js/foundation/foundation.abide.js',
@@ -64,15 +65,7 @@ var zip = require('gulp-zip');                     // Zip up dist
 //    Copy bower components to assets-folder
 //
 //////////////////////////////////////////////////////////////////////
-  gulp.task('copy',['copy-modernizr', 'copy-jquery']);
-
-  gulp.task('copy-modernizr', function(){
-    return gulp.src('bower_components/modernizr/modernizr.js')   // Gets Modernizr.js
-    .pipe(uglify())                                       // Uglify(minify)
-    .pipe(rename({suffix: '.min'}))                       // Rename it
-    .pipe(gulp.dest('assets/js/'))                        // Set destination to assets/js
-    .pipe(notify('Modernizr copied'));                        // Output to notification
-  });
+  gulp.task('copy',['copy-jquery']);
 
   gulp.task('copy-jquery', function(){
     return gulp.src('bower_components/jquery/dist/jquery.min.js')     // Gets Jquery
