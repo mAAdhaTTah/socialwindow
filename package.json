@@ -1,6 +1,6 @@
 {
   "name": "socialwindow",
-  "version": "0.3.0",
+  "version": "0.3.5",
   "description": "Social tumblog theme for SocialDen",
   "main": "gulpfile.js",
   "devDependencies": {
