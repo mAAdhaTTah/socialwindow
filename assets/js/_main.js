@@ -33,7 +33,11 @@ var Roots = {
   // Home page
   home: {
     init: function() {
-      swSplash.init();
+      $(window).stellar({
+        horizontalScrolling: false,
+        responsive: true,
+        hideDistantElements: true,
+      });
     }
   },
 };
