@@ -65,12 +65,18 @@ var zip = require('gulp-zip');                     // Zip up dist
 //    Copy bower components to assets-folder
 //
 //////////////////////////////////////////////////////////////////////
-  gulp.task('copy',['copy-jquery']);
+  gulp.task('copy',['copy-jquery', 'copy-fa']);
 
   gulp.task('copy-jquery', function(){
     return gulp.src('bower_components/jquery/dist/jquery.min.js')     // Gets Jquery
     .pipe(gulp.dest('assets/js/'))                        // Set destination to assets/js
     .pipe(notify('jQuery copied'));                        // Output to notification
+  });
+
+  gulp.task('copy-fa', function(){
+    return gulp.src('bower_components/font-awesome/fonts/**')     // Gets Jquery
+    .pipe(gulp.dest('assets/fonts/'))                        // Set destination to assets/js
+    .pipe(notify('Font-Awesome copied'));                        // Output to notification
   });
 //
 //    JS hint

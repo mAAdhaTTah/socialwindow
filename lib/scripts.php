@@ -13,9 +13,6 @@ function roots_scripts() {
   wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Unica+One|Vollkorn:400italic,700italic,400,700|Ubuntu:400,700', false);
   wp_enqueue_style( 'googleFonts');
 
-  wp_register_style('fontAwesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', false);
-  wp_enqueue_style( 'fontAwesome');
-
   wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false);
 
   if (!is_admin() && current_theme_supports('jquery-cdn')) {
