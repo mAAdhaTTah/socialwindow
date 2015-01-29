@@ -1,5 +1,3 @@
-<?php get_template_part('templates/page', 'header'); ?>
-
 <div data-alert class="alert-box warning">
   <?php _e('Looks like the page you were trying to view does not exist.', 'roots'); ?>
 </div>
