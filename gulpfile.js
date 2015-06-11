@@ -39,7 +39,6 @@ var zip = require('gulp-zip');                     // Zip up dist
   gulp.task('javascripts', function(){
     return gulp.src([
       'bower_components/fastclick/lib/fastclick.js',      // Gets fastclick
-      'bower_components/jquery.stellar/jquery.stellar.min.js',      // Gets jQuery stellar
       'bower_components/modernizr/modernizr.js',   // Get Modernizer
       'bower_components/bigfoot/dist/bigfoot.js',   // Get Bigfoot
       // Gets Foundation JS

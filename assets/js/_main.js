@@ -33,11 +33,7 @@ var Roots = {
   // Home page
   home: {
     init: function() {
-      $(window).stellar({
-        horizontalScrolling: false,
-        responsive: true,
-        hideDistantElements: true,
-      });
+      // @todo make the header image parallax
     }
   },
 };
