@@ -41,6 +41,7 @@ var zip = require('gulp-zip');                     // Zip up dist
       'bower_components/fastclick/lib/fastclick.js',      // Gets fastclick
       'bower_components/jquery.stellar/jquery.stellar.min.js',      // Gets jQuery stellar
       'bower_components/modernizr/modernizr.js',   // Get Modernizer
+      'bower_components/bigfoot/dist/bigfoot.js',   // Get Bigfoot
       // Gets Foundation JS
       'bower_components/foundation/js/foundation/foundation.js',
       'bower_components/foundation/js/foundation/foundation.abide.js',
@@ -74,8 +75,8 @@ var zip = require('gulp-zip');                     // Zip up dist
   });
 
   gulp.task('copy-fa', function(){
-    return gulp.src('bower_components/font-awesome/fonts/**')     // Gets Jquery
-    .pipe(gulp.dest('assets/fonts/'))                        // Set destination to assets/js
+    return gulp.src('bower_components/font-awesome/fonts/**')     // Gets font-awesome
+    .pipe(gulp.dest('assets/fonts/'))                        // Set destination to assets/fonts
     .pipe(notify('Font-Awesome copied'));                        // Output to notification
   });
 //
