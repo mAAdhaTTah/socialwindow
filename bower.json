@@ -21,8 +21,7 @@
   ],
   "dependencies": {
     "foundation": "5.3.3",
-    "jquery.stellar": "0.6.2",
-    "font-awesome": "4.3.0",
+    "font-awesome": "4.4.0",
     "bigfoot": "2.1.3"
   }
 }
