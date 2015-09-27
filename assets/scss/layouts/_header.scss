@@ -2,6 +2,10 @@
   background-size: cover;
   background-attachment: fixed;
   margin-bottom: 20px;
+
+  body.home & {
+    opacity: 0;
+  }
 }
 
 .banner {
@@ -9,6 +13,10 @@
   padding: rem-calc(20 5);
   background: rgba(255,255,255,.2);
   border-radius: $global-radius;
+
+  body.home & {
+    opacity: 0;
+  }
 }
 
 #logo  {
@@ -88,4 +96,8 @@
       font-size: $h6-font-size;
     }
   }
+}
+
+body.home #social-links .fa {
+  opacity: 0;
 }

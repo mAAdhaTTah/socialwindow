@@ -1,13 +1,12 @@
 <header id="splash"
-  data-stellar-background-ratio=".5"
-  data-interchange="
-    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header.jpg, (default)],
-    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header-small.jpg, (small)],
-    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header-medium.jpg, (medium)],
-    [<?php echo get_template_directory_uri(); ?>/assets/img_min/header-large.jpg, (large)]
-">
+  data-socwin-header-container
+  data-bg-image-default="<?php echo get_template_directory_uri(); ?>/assets/img_min/header.jpg"
+  data-bg-image-small="<?php echo get_template_directory_uri(); ?>/assets/img_min/header-small.jpg"
+  data-bg-image-medium="<?php echo get_template_directory_uri(); ?>/assets/img_min/header-medium.jpg"
+  data-bg-image-large="<?php echo get_template_directory_uri(); ?>/assets/img_min/header-large.jpg"
+>
 
-  <section class="banner">
+  <section class="banner" data-socwin-header-banner>
     <div id="logo" class="columns">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><div class="container"></div></a>
     </div>
@@ -18,31 +17,31 @@
 
       <div id="social-links">
         <a href="https://www.facebook.com/james.digioia" target="_blank">
-          <i class="fa fa-facebook-square"></i>
+          <i class="fa fa-facebook-square" data-socwin-icon></i>
         </a>
         <a href="https://twitter.com/JamesDiGioia" target="_blank">
-          <i class="fa fa-twitter-square"></i>
+          <i class="fa fa-twitter-square" data-socwin-icon></i>
         </a>
         <a href="https://www.linkedin.com/in/jamesdigioia" target="_blank">
-          <i class="fa fa-linkedin-square"></i>
+          <i class="fa fa-linkedin-square" data-socwin-icon></i>
         </a>
         <a href="https://plus.google.com/+JamesDiGioia" target="_blank">
-          <i class="fa fa-google-plus-square"></i>
+          <i class="fa fa-google-plus-square" data-socwin-icon></i>
         </a>
         <a href="http://instagram.com/jamesdigioia" target="_blank">
-          <i class="fa fa-instagram"></i>
+          <i class="fa fa-instagram" data-socwin-icon></i>
         </a>
         <a href="http://jamesdigioia.tumblr.com/" target="_blank">
-          <i class="fa fa-tumblr-square"></i>
+          <i class="fa fa-tumblr-square" data-socwin-icon></i>
         </a>
         <a href="https://github.com/mAAdhaTTah/" target="_blank">
-          <i class="fa fa-github-square"></i>
+          <i class="fa fa-github-square" data-socwin-icon></i>
         </a>
         <a href="https://www.reddit.com/user/maadhattah" target="_blank">
-          <i class="fa fa-reddit-square"></i>
+          <i class="fa fa-reddit-square" data-socwin-icon></i>
         </a>
         <a href="http://stackexchange.com/users/3267217/maadhattah" target="_blank">
-          <i class="fa fa-stack-exchange"></i>
+          <i class="fa fa-stack-exchange" data-socwin-icon></i>
         </a>
       </div>
 

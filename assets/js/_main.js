@@ -16,6 +16,7 @@
  * ======================================================================== */
 
 (function($) {
+'use strict';
 
 // Use this variable to set up the common and page specific functions. If you
 // rename this variable, you will also need to rename the namespace below.
@@ -28,14 +29,18 @@ var Roots = {
       $.bigfoot({
         numberResetSelector: "article"
       });
+
+      if (!$('body').hasClass('home')) {
+        socwin.header(false);
+      }
     }
   },
   // Home page
   home: {
     init: function() {
-      // @todo make the header image parallax
+      socwin.header(true);
     }
-  },
+  }
 };
 
 // The routing fires all common scripts, followed by the page specific scripts.
