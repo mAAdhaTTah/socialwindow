@@ -94,7 +94,7 @@ var zip = require('gulp-zip');                     // Zip up dist
 
         var errors = file.jshint.results.map(function (data) {
           if (data.error) {
-            return "(" + data.error.line + ':' + data.error.character + ') ' + data.error.reason;
+            return data.file.split('/').pop() + " (" + data.error.line + ':' + data.error.character + ') ' + data.error.reason;
           }
         }).join("\n");
         return file.relative + " (" + file.jshint.results.length + " errors)\n" + errors;
@@ -136,7 +136,7 @@ var zip = require('gulp-zip');                     // Zip up dist
       '!bower_components',
       '!assets/scss/**',
       '!assets/scss',
-      '**/**',
+      '**/**'
     ]).pipe(zip('socialwindow.zip'))
       .pipe(gulp.dest('.'))
       .pipe(notify('Theme zip built'));
