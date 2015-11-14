@@ -17,8 +17,8 @@
   );
 }
 
-blockquote p {
-  @include fa-content("\f10d");
+blockquote > p {
+    @include fa-content("\f10d");
 
   &:before {
     float: left;
