@@ -15,6 +15,8 @@ $defaults = array(
 );
 add_theme_support( 'custom-header', $defaults );
 
+add_theme_support( 'title-tag' );
+
 /**
  * Configuration values
  */
