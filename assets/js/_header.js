@@ -17,15 +17,15 @@ socwin.header = (function() {
   function getImageURL() {
     if (url) { return url; }
 
-    //if (Foundation.utils.is_small_only()) {
-    //  url = $header.data('bg-image-small');
-    //} else if (Foundation.utils.is_medium_only()) {
-    //  url = $header.data('bg-image-medium');
-    //} else if (Foundation.utils.is_large_only()) {
-    //  url = $header.data('bg-image-large');
-    //} else {
+    if (window.matchMedia('(max-width: 48.75em)').matches) {
+     url = $header.data('bg-image-small');
+    } else if (window.matchMedia('(max-width: 64em)').matches) {
+     url = $header.data('bg-image-medium');
+    } else if (window.matchMedia('(max-width: 90em)').matches) {
+     url = $header.data('bg-image-large');
+    } else {
       url = $header.data('bg-image-default');
-    //}
+    }
 
     return url;
   }
