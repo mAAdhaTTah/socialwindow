@@ -36,6 +36,10 @@ class Roots_Wrapping {
   }
 
   static function wrap($main) {
+    if (is_embed()) {
+      return $main;
+    }
+
     self::$main_template = $main;
     self::$base = basename(self::$main_template, '.php');
 
