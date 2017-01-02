@@ -1,7 +1,7 @@
-var gulp = require('gulp');                        // Gulp!
+var gulp = require('gulp');// Gulp!
+var gutil = require('gulp-util');
 var sass = require('gulp-sass');                   // Sass
-var prefix = require('gulp-autoprefixer');         // Autoprefixr
-var minifycss = require('gulp-minify-css');        // Minify CSS
+var cssnano = require('gulp-cssnano');        // Minify CSS
 var concat = require('gulp-concat');               // Concat files
 var uglify = require('gulp-uglify');               // Uglify javascript
 var svgmin = require('gulp-svgmin');               // SVG minify
@@ -26,7 +26,7 @@ var zip = require('gulp-zip');                     // Zip up dist
       }))                                                        // Compile sass
       .pipe(concat('main.css'))                                  // Concat all css
       .pipe(rename({suffix: '.min'}))                            // Rename it
-      .pipe(minifycss())                                         // Minify the CSS
+      .pipe(cssnano({ safe: true }))                                         // Minify the CSS
       .pipe(gulp.dest('assets/css/'))                            // Set the destination to assets/css
       .pipe(livereload())                                        // Reloads server
       .pipe(notify('Sass compiled & minified'));                 // Output to notification

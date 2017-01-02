@@ -620,7 +620,7 @@ $topbar-bg-color: $secondary-color;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: 45px;
+$topbar-height: rem-calc(45);
 $topbar-margin-bottom: 0;
 
 // Style the top bar dropdown elements
