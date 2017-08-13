@@ -29,16 +29,12 @@ var Roots = {
       $.bigfoot({
         numberResetSelector: "article"
       });
-
-      if (!$('body').hasClass('home')) {
-        socwin.header(false);
-      }
     }
   },
   // Home page
   home: {
     init: function() {
-      socwin.header(true);
+      socwin.header();
     }
   }
 };

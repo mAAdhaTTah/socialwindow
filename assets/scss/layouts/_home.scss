@@ -1,10 +1,12 @@
 .home {
   #splash {
     height: 100%;
+    margin-bottom: 0;
+    background-size: cover;
 
     .nav-container {
       position: absolute;
-      bottom: -45px;
+      bottom: 0;
       left: 0;
     }
 

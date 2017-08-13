@@ -15,11 +15,13 @@
       get_template_part('partials/header');
     ?>
 
+    <?php if ( ! is_front_page() ) : ?>
     <div class="wrap" role="document">
-      <main class="main" role="main">
+      <main class="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->
     </div><!-- /.content -->
+    <?php endif; ?>
 
     <?php wp_footer(); ?>
 

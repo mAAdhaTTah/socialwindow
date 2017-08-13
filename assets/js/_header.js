@@ -58,17 +58,14 @@ socwin.header = (function() {
       });
   }
 
-  return function(animate) {
+  return function() {
     setUpVariables();
 
     var image = new Image();
 
     image.onload = function() {
       $header.css('background-image', 'url(' + getImageURL() + ')');
-
-      if (animate) {
-        setTimeout(animation, 200);
-      }
+      setTimeout(animation, 200);
 
     };
     image.src = getImageURL();

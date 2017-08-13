@@ -1,9 +1,13 @@
 <header id="splash"
   data-socwin-header-container
-  data-bg-image-default="<?php echo get_template_directory_uri(); ?>/assets/img_min/header.jpg"
-  data-bg-image-small="<?php echo get_template_directory_uri(); ?>/assets/img_min/header-small.jpg"
-  data-bg-image-medium="<?php echo get_template_directory_uri(); ?>/assets/img_min/header-medium.jpg"
-  data-bg-image-large="<?php echo get_template_directory_uri(); ?>/assets/img_min/header-large.jpg"
+  <?php if(is_front_page()) : ?>
+    data-bg-image-default="<?php echo get_template_directory_uri(); ?>/assets/img_min/header.jpg"
+    data-bg-image-small="<?php echo get_template_directory_uri(); ?>/assets/img_min/header-small.jpg"
+    data-bg-image-medium="<?php echo get_template_directory_uri(); ?>/assets/img_min/header-medium.jpg"
+    data-bg-image-large="<?php echo get_template_directory_uri(); ?>/assets/img_min/header-large.jpg"
+  <?php else: ?>
+    style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img_min/header-top.jpg')"
+  <?php endif; ?>
 >
 
   <section class="banner" data-socwin-header-banner>
